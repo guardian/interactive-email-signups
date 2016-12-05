@@ -1,0 +1,218 @@
+@import "mq";
+@import "fonts";
+
+$neutral-1: #333333;
+$neutral-2: #767676;
+$neutral-3: #bdbdbd;
+$features-support-1: #951c55;
+$features-support-3: #fdadba;
+
+$gs-baseline: 12px;
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+    overflow-x: hidden !important;
+}
+
+.illustration-container {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background-color: #9576c8;
+    min-height: 10rem;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    z-index: 80;
+
+    @include mq(tablet) {
+        min-height: 20rem;
+    }
+}
+
+.inline-the-flyer__svg {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    z-index: 100;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+
+    @include mq(tablet) {
+        height: 100%;
+    }
+    @include mq(desktop) {
+        height: 100%;
+    }
+}
+
+.email-signup-main {
+    background-color: $features-support-1;
+}
+
+.email-signup-main:before {
+    height: $gs-baseline * 2;
+    content: '';
+    background-color: $features-support-1;
+    display: block;
+
+    @include mq(tablet) {
+        height: $gs-baseline * 4;
+    }
+
+    @include mq(desktop) {
+        height: $gs-baseline * 3;
+    }
+}
+
+.email-signup {
+    background-color: $features-support-1;
+    min-width: 16em;
+}
+
+.main__column--horizontal-bar:before {
+    content: '';
+    display: block;
+    border-bottom: 2px solid $features-support-3;
+}
+
+.content {
+    padding-bottom: $gs-baseline * 2;
+}
+
+.the-flyer {
+    margin-top: $gs-baseline;
+
+    .email-sub__lozenge {
+        border: 0.0625rem solid $features-support-3;
+        border-radius: 100px;
+        float: left;
+        width: 70%;
+        height: 3em;
+        margin-bottom: $gs-baseline;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: darken($features-support-3, 10%);
+        }
+
+        @include mq($until: tablet) {
+            width: 100%;
+        }
+    }
+
+    .email-signup__aside-text {
+        @include fs-textSans(2);
+        color: $features-support-3;
+        width: 65%;
+        margin-left: 2%;
+
+        @include mq($until: tablet) {
+            width: 95%;
+        }
+    }
+
+    .email-signup__aside-text__frequency {
+        color: #ffffff;
+        float: right;
+    }
+}
+
+.coloured-heading {
+    color: $features-support-3;
+}
+
+.email-signup-main {
+    background-color: $features-support-1;
+}
+
+.email-signup-main:before {
+    height: $gs-baseline * 2;
+    content: '';
+    background-color: $features-support-1;
+    display: block;
+
+    @include mq(tablet) {
+        height: $gs-baseline * 4;
+    }
+
+    @include mq(desktop) {
+        height: $gs-baseline * 3;
+    }
+}
+
+.email-signup {
+    background-color: $features-support-1;
+    min-width: 16em;
+}
+
+.main__column--horizontal-bar:before {
+    content: '';
+    display: block;
+    border-bottom: 2px solid $features-support-3;
+    margin: 0 .3rem;
+}
+
+.content {
+    padding-bottom: $gs-baseline * 2;
+}
+
+.email-signup-header {
+    color: #ffffff;
+}
+
+.email-signup-header__heading {
+    @include fs-header(5);
+    padding: 0 .3rem;
+
+    @include mq($from: tablet) {
+        font-size: 36px;
+        margin-top: 8px;
+    }
+}
+
+.email-signup-header__text {
+    @include fs-bodyCopy(2);
+    padding: 0 .3rem;
+    margin-top: $gs-baseline / 2;
+
+    @include mq($from: tablet) {
+        @include fs-bodyCopy(3);
+        margin-top: $gs-baseline;
+    }
+}
+
+.email-signup-sample {
+    margin: $gs-baseline 0;
+    height: 300px;
+    background-color: #ffffff;
+}
+
+.email-signup-sample__button {
+    @include fs-textSans(2);
+    margin: $gs-baseline 0;
+    position: relative;
+    color: $neutral-1;
+    border: thin solid $neutral-3;
+    background-color: transparent;
+    height: 3em;
+    line-height: 28px;
+    border-radius: 100px;
+    padding-left: 12px;
+    padding-right: 32px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $neutral-2;
+    }
+
+    .inline-arrow-right {
+        fill: $neutral-2;
+        position: absolute;
+        right: 2px;
+        top: 1px;
+    }
+}
