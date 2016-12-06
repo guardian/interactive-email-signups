@@ -27,6 +27,12 @@ $gs-baseline: 12px;
     font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 }
 
+.gs-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
 .illustration-container {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
