@@ -137,10 +137,15 @@ $gs-baseline: 12px;
         }
     }
 
+    .inline-clock {
+        fill: #ffffff;
+    }
+
     .email-signup__aside-text {
         @include fs-textSans(2);
         color: $features-support-3;
         width: 65%;
+        padding-top: $gs-baseline;;
         margin-left: 2%;
 
         @include mq($until: tablet) {

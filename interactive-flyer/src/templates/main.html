@@ -1,6 +1,6 @@
 
     <div class="illustration-container">
-      <img src="<%= path %>/assets/the-flyer.png" class="inline-the-flyer__svg" />
+      <img src="<%= path %>/assets/the-flyer-optimised.png" class="inline-the-flyer__svg" />
     </div>
 
     <div class="content email-signup-main">
@@ -20,21 +20,10 @@
                 <div class="the-flyer">
 
                     <div class="email-signup" data-component="the-flyer">
-                      <form action="https://www.theguardian.com/email" method="post" class="email-sub__form js-email-sub__form" data-email-form-type="article" data-email-list-id="2211" data-link-name="referrer-unknown">
-                        <div class="email-sub__form-wrapper">
-                          <div class="">
-                            <input class="email-sub__lozenge email-sub__lozenge--input"
-                            data-link-name="the-flyer-input" type="email" name="email" placeholder="Email address" required/>
-                            <input class="js-email-sub__listid-input" type="hidden" name="listId" value="2211"/>
-                            <input class="" type="hidden" name="referrer" value="unknown"/>
-                            <button type="submit" class="email-sub__lozenge email-sub__lozenge--submit"
-                            data-link-name="the-flyer-submit">
-                                Sign up
-                            </button>
-                          </div>
-
-                        </div>
-                      </form>
+                      <iframe src="https://www.theguardian.com/email/form/plaintone/2211" height="42px" width="100%" scrolling="no" frameborder="0" seamless
+                      class="iframed--overflow-hidden js-email-sub__iframe js-email-sub__iframe--article"
+                      data-form-success-desc="">
+                      </iframe>
 
                         <div class="email-signup__aside-text">
                             <span>No spam ever. Unsubscribe in one click.</span>
