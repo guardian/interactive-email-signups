@@ -38,13 +38,17 @@ $gs-baseline: 12px;
     transform: translate3d(0, 0, 0);
     background-color: #9576c8;
     min-height: 10rem;
-    height: 200px;
+    height: 260px;
     width: 100%;
     position: relative;
     z-index: 80;
 
     @include mq(tablet) {
-        min-height: 20rem;
+        min-height: 400px;
+    }
+
+    @include mq(desktop) {
+        right: 140px;
     }
 }
 
