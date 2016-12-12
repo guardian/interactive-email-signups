@@ -73,21 +73,6 @@ $gs-baseline: 12px;
     background-color: $features-support-1;
 }
 
-.email-signup-main:before {
-    height: $gs-baseline * 2;
-    content: '';
-    background-color: $features-support-1;
-    display: block;
-
-    @include mq(tablet) {
-        height: $gs-baseline * 4;
-    }
-
-    @include mq(desktop) {
-        height: $gs-baseline * 3;
-    }
-}
-
 .email-signup {
     padding-top: $gs-baseline * 2;
     background-color: $features-support-1;
@@ -97,7 +82,7 @@ $gs-baseline: 12px;
 .main__column--horizontal-bar:before {
     content: '';
     display: block;
-    border-bottom: 2px solid $features-support-3;
+    border-bottom: 2px solid $features-support-1;
 }
 
 .content {
@@ -172,21 +157,6 @@ $gs-baseline: 12px;
     background-color: $features-support-1;
 }
 
-.email-signup-main:before {
-    height: $gs-baseline * 2;
-    content: '';
-    background-color: $features-support-1;
-    display: block;
-
-    @include mq(tablet) {
-        height: $gs-baseline * 4;
-    }
-
-    @include mq(desktop) {
-        height: $gs-baseline * 3;
-    }
-}
-
 .email-signup {
     background-color: $features-support-1;
     min-width: 16em;
@@ -195,7 +165,7 @@ $gs-baseline: 12px;
 .main__column--horizontal-bar:before {
     content: '';
     display: block;
-    border-bottom: 2px solid $features-support-3;
+    border-bottom: 2px solid $features-support-1;
     margin: 0 .3rem;
 }
 
@@ -209,22 +179,31 @@ $gs-baseline: 12px;
 
 .email-signup-header__heading {
     @include fs-header(5);
-    padding: 0 .3rem;
+    padding: 6px 0px 4px .3rem;
+    font-size: 32px;
 
     @include mq($from: tablet) {
         font-size: 36px;
-        margin-top: 8px;
+        margin-top: 2px;
     }
 }
+
+.email-signup-header__intro {
+    @include fs-header(2);
+    padding: 0 .3rem;
+
+    @include mq($from: tablet) {
+        @include fs-header(3);
+    }
+  }
 
 .email-signup-header__text {
     @include fs-bodyCopy(2);
     padding: 0 .3rem;
-    margin-top: $gs-baseline / 2;
+    margin-top: $gs-baseline;
 
     @include mq($from: tablet) {
         @include fs-bodyCopy(3);
-        margin-top: $gs-baseline;
     }
 }
 
