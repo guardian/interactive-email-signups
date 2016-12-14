@@ -1,6 +1,7 @@
 import config from './config.json'
 
 import gulp from 'gulp'
+import AWS from 'aws-sdk'
 import file from 'gulp-file'
 import gutil from 'gulp-util'
 import s3 from 'gulp-s3-upload';
@@ -90,6 +91,8 @@ function s3Upload(cacheControl, keyPrefix) {
         'ACL': 'public-read',
         'CacheControl': cacheControl,
         'keyTransform': fn => `${keyPrefix}/${fn}`
+      }, {
+        'credentials': new AWS.SharedIniFileCredentials({profile: 'interactives'})
     });
 }
 
