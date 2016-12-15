@@ -164,7 +164,7 @@ gulp.task('deploy', ['build'], cb => {
     inquirer.prompt({
         type: 'list',
         name: 'env',
-        message: 'Where would you like to deploy to?',
+        message: 'WARNING! This is published! Are you sure you want to deploy again?',
         choices: ['preview', 'live']
     }).then(res => {
         let isLive = res.env === 'live';

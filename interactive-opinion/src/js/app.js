@@ -1,18 +1,6 @@
 
-function canRun() {
-  var userAgent = navigator.userAgent.toLowerCase();
-  var isAndroid = userAgent.indexOf("android") > -1;
-  var isApple = /iphone|ipod|ipad/.test(userAgent);
-
-  if (isAndroid) {
-    return (userAgent.indexOf("wv") > -1) ||
-      (userAgent.indexOf("version/") > -1 &&
-      userAgent.indexOf("chrome/") > -1);
-  } else if (isApple) {
-    // TODO work out how to check iOS webview vs browser
-  } else {
-    return false;
-  }
+function isWebView() {
+  return (typeof window.GU !== 'undefined') ? true : false;
 }
 
 function getRandomBucket(list) {
@@ -20,8 +8,6 @@ function getRandomBucket(list) {
     Math.random() * list.length
   ))];
 }
-
-// to differentiate between the WebView and Chrome for Android, look for the presence of the Version/_X.X_ string https://developer.chrome.com/multidevice/user-agent#webview_user_agent
 
 function updateWebView(emailListID) {
     var emailForm = document.getElementsByClassName('js-email-sub__iframe')[0];
@@ -34,6 +20,6 @@ function init(listIDs) {
     updateWebView(listID);
 }
 
-if (canRun()) {
+if (isWebView()) {
   init(['9999', '8888']);
 }
