@@ -42,7 +42,7 @@
   }
 
   function updateExampleUrl(exampleUrl) {
-    const example = document.getElementsByClassName('.js-email-example')[0];
+    const example = document.getElementsByClassName('js-email-example')[0];
     if(example) {
       example.setAttribute('href', exampleUrl);
     }
