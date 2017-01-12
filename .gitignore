@@ -5,3 +5,4 @@ bower_components/
 yarn.lock
 .DS_Store
 npm-debug.log
+.idea
