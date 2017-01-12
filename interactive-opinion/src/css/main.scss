@@ -2,8 +2,10 @@
 @import "fonts";
 
 $neutral-1: #333333;
+$neutral-7: #484848;
 $neutral-2: #767676;
 $neutral-3: #bdbdbd;
+$illustration-bg: #2c407f;
 
 $comment-main-1: #c05303;
 $comment-main-2: #ff9b0b;
@@ -37,45 +39,36 @@ $gs-baseline: 12px;
 }
 
 .gs-container {
-    padding-left: 10px;
-    padding-right: 10px;
     box-sizing: border-box;
 }
 
 .content {
-    padding-bottom: $gs-baseline * 2;
+    padding-bottom: $gs-baseline * 4;
 }
 
 .illustration-container {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    background-color: $comment-support-4;
+    background-color: $illustration-bg;
     min-height: 10rem;
-    height: 200px;
+    height: 220px;
     width: 100%;
     position: relative;
     z-index: 80;
 
     @include mq(tablet) {
-        min-height: 20rem;
+        height: 360px;
     }
 }
 
-.inline-illustration__svg {
+.inline-opinion__png {
     overflow: hidden;
     position: absolute;
-    height: 112%;
+    height: 100%;
     z-index: 100;
     left: -9999px;
     right: -9999px;
     margin: auto;
-
-    @include mq(tablet) {
-        height: 115%;
-    }
-    @include mq(desktop) {
-        height: 112%;
-    }
 }
 
 .email-signup {
@@ -89,9 +82,14 @@ $gs-baseline: 12px;
     border-bottom: 2px solid $comment-support-2;
 }
 
+
+
 .email-signup-main {
     background-color: $comment-support-2;
-    padding-top: $gs-baseline * 2;
+  }
+
+.opinion-email {
+    margin-top: $gs-baseline * 2;
 
     .email-sub__lozenge {
         border: 0.0625rem solid $comment-support-2;
@@ -117,7 +115,7 @@ $gs-baseline: 12px;
     }
 
     .email-sub__lozenge--submit {
-        color: $neutral-1;
+        color: $neutral-7;
         width: 25%;
         margin: 0px 0px $gs-baseline 3%;
         background-color: inherit;
@@ -129,14 +127,13 @@ $gs-baseline: 12px;
     }
 
     .inline-clock {
-        fill: $neutral-1;
+        fill: $neutral-7;
     }
 
     .email-signup__aside-text {
         @include fs-textSans(2);
         color: $comment-support-4;
         width: 65%;
-        padding-top: $gs-baseline;;
         margin-left: 2%;
 
         @include mq($until: tablet) {
@@ -145,7 +142,7 @@ $gs-baseline: 12px;
     }
 
     .email-signup__aside-text__frequency {
-        color: $neutral-1;
+        color: $neutral-2;
         float: right;
     }
 }
@@ -154,26 +151,29 @@ $gs-baseline: 12px;
     color: $comment-support-4;
 }
 
-.main__column--horizontal-bar:before {
-    content: '';
-    display: block;
-    border-bottom: 2px solid $comment-support-4;
-    margin: 0 .3rem;
-}
-
 .email-signup-header {
-    color: $neutral-1;
+    color: $neutral-7;
 }
 
 .email-signup-header__heading {
     @include fs-header(5);
-    padding: 0 .3rem;
+    padding: 6px 0px 4px .3rem;
+    font-size: 28px;
 
     @include mq($from: tablet) {
         font-size: 36px;
-        margin-top: 8px;
+        margin-top: 2px;
     }
 }
+
+.email-signup-header__intro {
+    @include fs-header(2);
+    padding: 0 .3rem;
+
+    @include mq($from: tablet) {
+        @include fs-header(3);
+    }
+  }
 
 .email-signup-header__text {
     @include fs-bodyCopy(2);
@@ -187,34 +187,6 @@ $gs-baseline: 12px;
 }
 
 .email-signup-sample {
-    margin: $gs-baseline 0;
     height: 300px;
     background-color: #ffffff;
-}
-
-.email-signup-sample__button {
-    @include fs-textSans(2);
-    margin: $gs-baseline 0;
-    position: relative;
-    color: $neutral-1;
-    border: thin solid $neutral-3;
-    background-color: transparent;
-    height: 3em;
-    line-height: 28px;
-    border-radius: 100px;
-    padding-left: 12px;
-    padding-right: 32px;
-
-    &:hover,
-    &:focus,
-    &:active {
-        border-color: $neutral-2;
-    }
-
-    .inline-arrow-right {
-        fill: $neutral-2;
-        position: absolute;
-        right: 2px;
-        top: 1px;
-    }
 }
