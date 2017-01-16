@@ -67,7 +67,7 @@ $gs-baseline: 12px;
     height: 220px;
     width: 100%;
     position: relative;
-    z-index: 0;
+    z-index: 10;
 
     @include mq(tablet) {
         height: 360px;
