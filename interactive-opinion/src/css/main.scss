@@ -16,8 +16,16 @@ $comment-support-4: #e6711b;
 
 $gs-baseline: 12px;
 
+.l-side-margins {
+  min-height: calc(100vh - 48px);
+}
+
 .is-hidden {
   display: none;
+}
+
+.is-immersive {
+  background-color: $comment-support-2;
 }
 
 .element-atom,
@@ -40,6 +48,11 @@ $gs-baseline: 12px;
 
 .gs-container {
     box-sizing: border-box;
+    padding: 0 8px;
+
+    &.l-header__inner {
+      padding: 0;
+    }
 }
 
 .content {
@@ -54,7 +67,7 @@ $gs-baseline: 12px;
     height: 220px;
     width: 100%;
     position: relative;
-    z-index: 80;
+    z-index: 0;
 
     @include mq(tablet) {
         height: 360px;
@@ -65,7 +78,7 @@ $gs-baseline: 12px;
     overflow: hidden;
     position: absolute;
     height: 100%;
-    z-index: 100;
+    z-index: 5;
     left: -9999px;
     right: -9999px;
     margin: auto;
@@ -159,6 +172,7 @@ $gs-baseline: 12px;
     @include fs-header(5);
     padding: 6px 0px 4px .3rem;
     font-size: 28px;
+    margin: 0;
 
     @include mq($from: tablet) {
         font-size: 36px;
@@ -169,6 +183,7 @@ $gs-baseline: 12px;
 .email-signup-header__intro {
     @include fs-header(2);
     padding: 0 .3rem;
+    margin: 0;
 
     @include mq($from: tablet) {
         @include fs-header(3);
@@ -186,7 +201,10 @@ $gs-baseline: 12px;
     }
 }
 
+// This is a hack so that the email box can be viewed on Android devices - Frank
 .email-signup-sample {
-    height: 300px;
-    background-color: #ffffff;
+
+    .android & {
+      height: 300px;
+    }
 }
