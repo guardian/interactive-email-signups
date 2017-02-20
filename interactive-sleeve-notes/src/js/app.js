@@ -2,16 +2,16 @@
 
   var VARIANTS = [
       {
-          id: 'Opinion-UK-Legacy',
+          id: 'Sleevenotes-UK-Legacy',
           test: function () {
-              const emailListID = '3814';
+              const emailListID = '3835';
               updateWebView(emailListID);
           }
       },
       {
-          id: 'Opinion-UK-Connected',
+          id: 'Sleevenotes-UK-Connected',
           test: function () {
-              const emailListID = '3811';
+              const emailListID = '3834';
               updateWebView(emailListID);
           }
       }
@@ -24,7 +24,7 @@
   }
 
   function getRandomBucket(variants) {
-    if (Math.random() < 0.1) {
+    if (Math.random() < 0.3) {
         return variants[0];
     } else {
         return variants[1];
