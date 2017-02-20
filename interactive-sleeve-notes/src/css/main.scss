@@ -17,6 +17,10 @@ $comment-support-4: #e6711b;
 
 $gs-baseline: 12px;
 
+.email-signup__lozenge {
+	margin: 0px -4px;
+}
+
 .l-side-margins {
   min-height: calc(100vh - 48px);
 }
@@ -148,8 +152,8 @@ $gs-baseline: 12px;
     .email-signup__aside-text {
         @include fs-textSans(2);
         color: $comment-support-3;
-        width: 65%;
-        margin-left: 2%;
+        width: 64%;
+        margin: 0% 3%;
 
         @include mq($until: tablet) {
             width: 95%;
@@ -181,21 +185,8 @@ $gs-baseline: 12px;
     }
 }
 
-// .email-signup-header__heading {
-//     @include fs-header(5);
-//     padding: 6px 0px 4px .3rem;
-//     font-size: 28px;
-//     margin: 0;
-//
-//     @include mq($from: tablet) {
-//         font-size: 36px;
-//         margin-top: 2px;
-//     }
-// }
-
 .email-signup-header__intro {
     @include fs-header(2);
-    padding: 0 .3rem;
     margin: 0;
 
     @include mq($from: tablet) {
@@ -205,12 +196,37 @@ $gs-baseline: 12px;
 
 .email-signup-header__text {
     @include fs-bodyCopy(2);
-    padding: 0 .3rem;
     margin-top: $gs-baseline / 2;
 
     @include mq($from: tablet) {
         @include fs-bodyCopy(3);
         margin-top: $gs-baseline;
+    }
+}
+
+.email-signup-header {
+    a {
+        text-decoration: none !important;
+        color: $comment-support-3;
+        &:hover {
+            color: darken($comment-support-3, 10%);
+        }
+    }
+    a {
+        &::after {
+            display: inline-block;
+            position: relative;
+            top: 2px;
+            content: '';
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%22-1%20-1%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Ccircle%20stroke%3D%22%23ffce4b%22%20stroke-width%3D%22.74%22%20cx%3D%229%22%20cy%3D%229%22%20r%3D%229%22%2F%3E%3Cpath%20fill%3D%22%23ffce4b%22%20d%3D%22M9.43%203.27l5.1%205.37v.5l-5.1%205.38-.48-.5%203.66-4.6H3.3V8.37h9.34L9%203.77%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+            width: 18px;
+            height: 18px;
+            background-size: 18px 18px;
+            background-repeat: no-repeat;
+        }
+				&:hover::after {
+						background-image: url('data:image/svg+xml;utf8,%3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%22-1%20-1%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Ccircle%20fill%3D%22%23ffce4b%22%20stroke-width%3D%22.74%22%20cx%3D%229%22%20cy%3D%229%22%20r%3D%229%22%2F%3E%3Cpath%20fill%3D%22%23615b52%22%20d%3D%22M9.43%203.27l5.1%205.37v.5l-5.1%205.38-.48-.5%203.66-4.6H3.3V8.37h9.34L9%203.77%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+				}
     }
 }
 
