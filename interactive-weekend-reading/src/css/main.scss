@@ -163,10 +163,6 @@ $gs-baseline: 12px;
     }
 }
 
-.coloured-heading {
-    color: $features-support-3;
-}
-
 .email-signup-main {
     background-color: $features-support-1;
 }
@@ -195,7 +191,7 @@ $gs-baseline: 12px;
     content: '';
     display: block;
     border-bottom: 2px solid $features-support-3;
-    margin: 0 .3rem;
+    margin: 0;
 }
 
 .content {
@@ -207,18 +203,36 @@ $gs-baseline: 12px;
 }
 
 .email-signup-header__heading {
-    @include fs-header(5);
-    padding: 0 .3rem;
+    display: inline-block;
+    padding-top: $gs-baseline / 2;
+    line-height: none;
 
-    @include mq($from: tablet) {
-        font-size: 36px;
-        margin-top: 8px;
+    svg {
+      height: 30px;
+      width: 226px;
+
+      @include mq($from: tablet) {
+        height: 39px;
+        width: 294px;
+      }
     }
 }
 
+.email-signup-header__intro {
+    @include fs-header(2);
+    margin: 0;
+    line-height: 0;
+    padding-top: $gs-baseline / 2;
+    padding-bottom: $gs-baseline;
+
+    @include mq($from: tablet) {
+        @include fs-header(3);
+        line-height: 0;
+    }
+  }
+
 .email-signup-header__text {
     @include fs-bodyCopy(2);
-    padding: 0 .3rem;
     margin-top: $gs-baseline / 2;
 
     @include mq($from: tablet) {
@@ -227,10 +241,12 @@ $gs-baseline: 12px;
     }
 }
 
+// This is a hack so that the email box can be viewed on Android devices - Frank
 .email-signup-sample {
-    margin: $gs-baseline 0;
-    height: 300px;
-    background-color: #ffffff;
+
+    .android & {
+      height: 300px;
+    }
 }
 
 .email-signup-sample__button {
