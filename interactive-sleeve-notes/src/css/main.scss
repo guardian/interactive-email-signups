@@ -21,10 +21,6 @@ $gs-baseline: 12px;
 	margin: 0px -4px;
 }
 
-.l-side-margins {
-  min-height: calc(100vh - 48px);
-}
-
 .is-hidden {
   display: none;
 }
@@ -68,7 +64,7 @@ $gs-baseline: 12px;
 .illustration-container {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    background-color: $illustration-bg;
+    background-color: $review-support-1;
     min-height: 10rem;
     height: 220px;
     width: 100%;
@@ -80,7 +76,7 @@ $gs-baseline: 12px;
     }
 }
 
-.inline-opinion__png {
+.inline-sleevenotes__png {
     overflow: hidden;
     position: absolute;
     height: 100%;
