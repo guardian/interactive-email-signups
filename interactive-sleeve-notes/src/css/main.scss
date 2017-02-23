@@ -18,7 +18,7 @@ $comment-support-4: #e6711b;
 $gs-baseline: 12px;
 
 .email-signup__lozenge {
-	margin: 0px -4px;
+	margin: 0px -8px;
 }
 
 .is-hidden {
@@ -77,13 +77,20 @@ $gs-baseline: 12px;
 }
 
 .inline-sleevenotes__png {
-    overflow: hidden;
-    position: absolute;
-    height: 100%;
-    z-index: 5;
-    left: -9999px;
-    right: -9999px;
-    margin: auto;
+	overflow: hidden;
+	background-image: url('../assets/sleeve-notes-mobile-optimised.png');
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: auto 100%;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	margin: auto;
+	z-index: 5;
+
+	@include mq($from: phablet) {
+		background-image: url('../assets/sleeve-notes-optimised.png');
+	}
 }
 
 .email-signup {
