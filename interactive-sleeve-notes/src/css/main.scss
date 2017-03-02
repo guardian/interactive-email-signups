@@ -156,10 +156,10 @@ $gs-baseline: 12px;
         @include fs-textSans(2);
         color: $comment-support-3;
         width: 64%;
-        margin: 0% 3%;
+        margin: 0% 4px;
 
         @include mq($until: tablet) {
-            width: 95%;
+            width: 97%;
         }
     }
 
@@ -214,6 +214,7 @@ $gs-baseline: 12px;
 
 .email-signup-header {
     a {
+				display: inline-block;
         text-decoration: none !important;
         color: $comment-support-3;
         &:hover {
