@@ -2,14 +2,14 @@
 
   var VARIANTS = [
       {
-          id: 'Sleevenotes-UK-Legacy',
+          id: 'SleeveNotes-Legacy',
           test: function () {
               const emailListID = '3835';
               updateWebView(emailListID);
           }
       },
       {
-          id: 'Sleevenotes-UK-Connected',
+          id: 'SleeveNotes-New',
           test: function () {
               const emailListID = '3834';
               updateWebView(emailListID);
