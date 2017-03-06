@@ -78,7 +78,7 @@ $gs-baseline: 12px;
 
 .inline-sleevenotes__png {
 	overflow: hidden;
-	background-image: url('https://uploads.guim.co.uk/2017/02/23/sleeve-notes-mobile-optimised.png');
+	background-image: url('https://uploads.guim.co.uk/2017/03/06/sleeve-notes-mobile-optimised.png');
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -89,7 +89,7 @@ $gs-baseline: 12px;
 	z-index: 5;
 
 	@include mq($from: phablet) {
-		background-image: url('https://uploads.guim.co.uk/2017/02/23/sleeve-notes-optimised.png');
+		background-image: url('https://uploads.guim.co.uk/2017/03/06/sleeve-notes-optimised.png');
 	}
 }
 
