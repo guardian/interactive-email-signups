@@ -160,39 +160,38 @@ $gs-baseline: 12px;
     }
 }
 
-.coloured-heading {
-    color: $comment-support-4;
-}
-
-.email-signup-header {
-    color: $neutral-7;
-}
 
 .email-signup-header__heading {
-    @include fs-header(5);
-    padding: 6px 0px 4px .3rem;
-    font-size: 28px;
-    margin: 0;
+    display: inline-block;
+    padding-top: $gs-baseline / 2;
+    line-height: none;
 
-    @include mq($from: tablet) {
-        font-size: 36px;
-        margin-top: 2px;
+    svg {
+      height: 30px;
+      width: 264px;
+
+      @include mq($from: tablet) {
+        height: 39px;
+        width: 344px;
+      }
     }
 }
 
 .email-signup-header__intro {
     @include fs-header(2);
-    padding: 0 .3rem;
     margin: 0;
+    line-height: 0;
+    padding-top: $gs-baseline / 2;
+    padding-bottom: $gs-baseline;
 
     @include mq($from: tablet) {
         @include fs-header(3);
+        line-height: 0;
     }
   }
 
 .email-signup-header__text {
     @include fs-bodyCopy(2);
-    padding: 0 .3rem;
     margin-top: $gs-baseline / 2;
 
     @include mq($from: tablet) {
