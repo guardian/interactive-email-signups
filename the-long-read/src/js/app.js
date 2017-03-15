@@ -2,16 +2,16 @@
 
   var VARIANTS = [
       {
-          id: 'SleeveNotes-Legacy',
+          id: 'TheLongRead-Legacy',
           test: function () {
-              const emailListID = '3835';
+              const emailListID = '???';
               updateWebView(emailListID);
           }
       },
       {
-          id: 'SleeveNotes-New',
+          id: 'TheLongRead-New',
           test: function () {
-              const emailListID = '3834';
+              const emailListID = '???';
               updateWebView(emailListID);
           }
       }
