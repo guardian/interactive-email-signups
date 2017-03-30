@@ -2,16 +2,16 @@
 
   var VARIANTS = [
       {
-          id: 'TheLongRead-Legacy',
+          id: 'Control',
           test: function () {
-              const emailListID = '???';
+              const emailListID = 3867
               updateWebView(emailListID);
           }
       },
       {
-          id: 'TheLongRead-New',
+          id: 'Variant',
           test: function () {
-              const emailListID = '???';
+              const emailListID = 3866
               updateWebView(emailListID);
           }
       }
