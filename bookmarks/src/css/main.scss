@@ -5,7 +5,7 @@ $neutral-1: #333333;
 $neutral-7: #484848;
 $neutral-2: #767676;
 $neutral-3: #bdbdbd;
-$illustration-bg: #2c407f;
+$illustration-bg: #000000;
 $white: #ffffff;
 
 $comment-main-1: #c05303;
@@ -64,7 +64,7 @@ $gs-baseline: 12px;
 .illustration-container {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    background-color: $review-support-1;
+    background-color: $illustration-bg;
     min-height: 10rem;
     height: 220px;
     width: 100%;
@@ -77,8 +77,9 @@ $gs-baseline: 12px;
 }
 
 .inline-custom__png {
+	display: none;
 	overflow: hidden;
-	background-image: url('https://uploads.guim.co.uk/2017/??/??/the-long-read-mobile-optimised.png');
+	background-image: url('https://media.guim.co.uk/bd33b2efd56427f05252ea4001b2a45cc63d38d5/0_0_5257_840/5257.png');
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -87,11 +88,139 @@ $gs-baseline: 12px;
 	background-repeat: no-repeat;
 	margin: auto;
 	z-index: 5;
+}
 
-	@include mq($from: phablet) {
-		background-image: url('https://uploads.guim.co.uk/2017/??/??/the-long-read-optimised.png');
+.inline-svg {
+	overflow: hidden;
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: auto;
+	z-index: 5;
+	svg {
+		height: 220px;
+	}
+	@include mq(tablet) {
+			svg {
+				height: 360px;
+			}
 	}
 }
+
+#Rocket {
+	transform-origin: center center;
+	animation-name: rotate-rocket;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate-rocket {
+	20% {
+			transform: translate(-9px, -13px) rotate(-8deg);
+	}
+	40% {
+			transform: translate(-4px, -5px) rotate(4deg);
+	}
+	60% {
+			transform: translate(-0px, -0px) rotate(-12deg);
+	}
+	80% {
+			transform: translate(-12px, -6px) rotate(-12deg);
+	}
+   0%, 100% {
+       transform: translate(0, 0) rotate(0deg);
+   }
+}
+
+#Burner {
+	animation-name: o-change;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes o-change {
+	0% {
+			opacity: 0;
+	}
+	20% {
+			opacity: 1;
+	}
+	80% {
+			opacity: 1;
+	}
+	90% {
+			opacity: 0;
+	}
+ 100% {
+       opacity: 0;
+   }
+}
+
+
+#shooting-star-2 {
+	animation-name: moving-star-2;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes moving-star-2 {
+	0% {
+		opacity: 0;
+		transform: translate(-300px, 200px);
+	}
+	5% {
+		opacity: 1;
+	}
+	15% {
+		opacity: 1;
+	}
+	20% {
+		transform: translate(300px, 40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(300px, 40px);
+		opacity: 0;
+	}
+}
+
+#shooting-star-4 {
+	animation-name: moving-star-4;
+	animation-delay: 2s;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes moving-star-4 {
+	0% {
+		opacity: 0;
+		transform: translate(300px, -80px);
+	}
+	5% {
+		opacity: 1;
+	}
+	15% {
+		opacity: 1;
+	}
+	20% {
+		transform: translate(-120px, 240px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(-120px, 240px);
+		opacity: 0;
+	}
+}
+
+
 
 .email-signup {
     background-color: $review-support-1;
@@ -245,4 +374,13 @@ $gs-baseline: 12px;
     .android & {
       height: 300px;
     }
+}
+
+.android {
+	.inline-svg {
+		display: none;
+	}
+	.inline-custom__png {
+		display: block;
+	}
 }
