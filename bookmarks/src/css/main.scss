@@ -376,7 +376,8 @@ $gs-baseline: 12px;
     }
 }
 
-.android {
+.android,
+.ios {
 	.inline-svg {
 		display: none;
 	}
