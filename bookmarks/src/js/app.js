@@ -4,14 +4,14 @@
       {
           id: 'Control',
           test: function () {
-              const emailListID = 3867
+              const emailListID = '3867'
               updateWebView(emailListID);
           }
       },
       {
           id: 'Variant',
           test: function () {
-              const emailListID = 3866
+              const emailListID = '3866'
               updateWebView(emailListID);
           }
       }
