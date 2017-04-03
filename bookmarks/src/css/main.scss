@@ -79,7 +79,7 @@ $gs-baseline: 12px;
 .inline-custom__png {
 	display: none;
 	overflow: hidden;
-	background-image: url('https://media.guim.co.uk/bd33b2efd56427f05252ea4001b2a45cc63d38d5/0_0_5257_840/5257.png');
+	background-image: url('https://media.guim.co.uk/aefbb95d412e62514bb3a5c9bdb47f23127f75ad/0_0_5257_840/5257.png');
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -379,6 +379,9 @@ $gs-baseline: 12px;
 .android,
 .ios {
 	.inline-svg {
+		display: none;
+	}
+	.u-h {
 		display: none;
 	}
 	.inline-custom__png {
