@@ -217,35 +217,8 @@ $gs-baseline: 12px;
     }
 }
 
-.email-signup-sample {
-    margin: $gs-baseline 0;
+.email-signup-after {
+    margin: 0;
     height: 300px;
-    background-color: #ffffff;
-}
-
-.email-signup-sample__button {
-    @include fs-textSans(2);
-    margin: $gs-baseline 0;
-    position: relative;
-    color: $neutral-1;
-    border: thin solid $neutral-3;
-    background-color: transparent;
-    height: 3em;
-    line-height: 28px;
-    border-radius: 100px;
-    padding-left: 12px;
-    padding-right: 32px;
-
-    &:hover,
-    &:focus,
-    &:active {
-        border-color: $neutral-2;
-    }
-
-    .inline-arrow-right {
-        fill: $neutral-2;
-        position: absolute;
-        right: 2px;
-        top: 1px;
-    }
+    background-color: $features-support-1;
 }
