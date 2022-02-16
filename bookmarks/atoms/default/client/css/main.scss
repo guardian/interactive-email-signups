@@ -19,6 +19,10 @@ $comment-support-4: #e6711b;
 
 $gs-baseline: 12px;
 
+$background-colour: $white;
+$text-colour: #000000;
+$secondary-colour: #c70000; 
+
 .email-signup__lozenge {
   margin: 0px -4px;
 }
@@ -28,7 +32,7 @@ $gs-baseline: 12px;
 }
 
 .is-immersive {
-  background-color: $review-support-1;
+  background-color: $background-colour;
 }
 
 .element-atom,
@@ -245,25 +249,25 @@ $gs-baseline: 12px;
 }
 
 .email-signup {
-  background-color: $review-support-1;
+  background-color: $background-colour;
   min-width: 16em;
 }
 
 .main__column--horizontal-bar:before {
   content: "";
   display: block;
-  border-bottom: 2px solid $review-support-1;
+  border-bottom: 2px solid $background-colour;
 }
 
 .email-signup-main {
-  background-color: $review-support-1;
+  background-color: $background-colour;
 }
 
 .custom-email {
   margin-top: $gs-baseline * 2;
 
   .email-sub__lozenge {
-    border: 0.0625rem solid $review-support-1;
+    border: 0.0625rem solid $background-colour;
     border-radius: 100px;
     float: left;
     width: 70%;
@@ -273,7 +277,7 @@ $gs-baseline: 12px;
     &:hover,
     &:focus,
     &:active {
-      border-color: darken($comment-support-3, 10%);
+      border-color: darken($secondary-colour, 10%);
     }
 
     @include mq($until: tablet) {
@@ -298,12 +302,12 @@ $gs-baseline: 12px;
   }
 
   .inline-clock {
-    fill: $white;
+    fill: $text-colour;
   }
 
   .email-signup__aside-text {
     @include fs-textSans(2);
-    color: $comment-support-3;
+    color: $secondary-colour;
     width: 64%;
     margin: 0% 4px;
 
@@ -313,14 +317,14 @@ $gs-baseline: 12px;
   }
 
   .email-signup__aside-text__frequency {
-    color: $white;
+    color: $text-colour;
     float: right;
     font-weight: bold;
   }
 }
 
 .email-signup-header {
-  color: $white;
+  color: $text-colour;
 }
 
 .email-signup-header__heading {
@@ -330,6 +334,10 @@ $gs-baseline: 12px;
   svg {
     height: 30px;
     width: 159px;
+
+    path {
+      fill: $text-colour;
+    }
 
     @include mq($from: tablet) {
       height: 39px;
@@ -365,25 +373,40 @@ $gs-baseline: 12px;
   a {
     display: inline-block;
     text-decoration: none !important;
-    color: $comment-support-3;
+    color: $secondary-colour;
     &:hover {
-      color: darken($comment-support-3, 10%);
+      color: darken($secondary-colour, 10%);
     }
   }
-  a {
-    &::after {
+
+  .link-with-arrow {
+
+    .link-with-arrow__arrow {
+      vertical-align: text-bottom;
+      margin-bottom: 2px;
       display: inline-block;
-      position: relative;
-      top: 2px;
-      content: "";
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%22-1%20-1%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Ccircle%20stroke%3D%22%23ffce4b%22%20stroke-width%3D%22.74%22%20cx%3D%229%22%20cy%3D%229%22%20r%3D%229%22%2F%3E%3Cpath%20fill%3D%22%23ffce4b%22%20d%3D%22M9.43%203.27l5.1%205.37v.5l-5.1%205.38-.48-.5%203.66-4.6H3.3V8.37h9.34L9%203.77%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-      width: 18px;
-      height: 18px;
-      background-size: 18px 18px;
-      background-repeat: no-repeat;
+
+      circle {
+        stroke: $secondary-colour;
+        fill: unset;
+      }
+
+      path {
+        fill: $secondary-colour;
+      }
     }
-    &:hover::after {
-      background-image: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%22-1%20-1%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Ccircle%20fill%3D%22%23ffce4b%22%20stroke-width%3D%22.74%22%20cx%3D%229%22%20cy%3D%229%22%20r%3D%229%22%2F%3E%3Cpath%20fill%3D%22%23615b52%22%20d%3D%22M9.43%203.27l5.1%205.37v.5l-5.1%205.38-.48-.5%203.66-4.6H3.3V8.37h9.34L9%203.77%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+
+    &:hover {
+      .link-with-arrow__arrow {
+        circle {
+          fill: darken($secondary-colour, 10%);
+          stroke: unset;
+        }
+
+        path {
+          fill: $white;
+        }
+      }
     }
   }
 }
