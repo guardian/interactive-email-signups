@@ -1,6 +1,7 @@
 @import "fonts";
 @import "mq";
 @import "palette";
+@import "gu_grid";
 // @import "enhancer";
 
 $neutral-1: #333333;
@@ -21,7 +22,7 @@ $gs-baseline: 12px;
 
 $background-colour: $white;
 $text-colour: #000000;
-$secondary-colour: #c70000; 
+$secondary-colour: #c70000;
 
 .email-signup__lozenge {
   margin: 0px -4px;
@@ -380,7 +381,6 @@ $secondary-colour: #c70000;
   }
 
   .link-with-arrow {
-
     .link-with-arrow__arrow {
       vertical-align: text-bottom;
       margin-bottom: 2px;
