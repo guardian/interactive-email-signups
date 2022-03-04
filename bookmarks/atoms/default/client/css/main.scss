@@ -72,7 +72,7 @@ $email-secondary-colour: #ab0613;
     height: 220px;
     width: 100%;
     position: relative;
-    z-index: 10;
+    z-index: 4;
 
     @include mq(tablet) {
       height: 360px;
@@ -90,22 +90,8 @@ $email-secondary-colour: #ab0613;
     background-position: 50% 0;
     background-repeat: no-repeat;
     margin: auto;
-    z-index: 5;
+    z-index: 3;
   }
-
-  // .inline-custom__png {
-  //   display: block;
-  //   overflow: hidden;
-  //   background-image: url("<%= path %>/header/test-2.png");
-  //   position: absolute;
-  //   height: 100%;
-  //   width: 100%;
-  //   background-size: auto 100%;
-  //   background-position: 50% 0;
-  //   background-repeat: no-repeat;
-  //   margin: auto;
-  //   z-index: 10;
-  // }
 
   .inline-svg {
     overflow: hidden;
@@ -115,7 +101,7 @@ $email-secondary-colour: #ab0613;
     left: 50%;
     transform: translateX(-50%);
     margin: auto;
-    z-index: 5;
+    z-index: 3;
     svg {
       height: 220px;
     }
@@ -275,7 +261,7 @@ $email-secondary-colour: #ab0613;
       }
     }
 
-    &__aside-text__frequency {
+    __aside-text__frequency {
       color: $email-text-colour;
       float: right;
       font-weight: bold;
