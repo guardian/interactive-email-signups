@@ -261,7 +261,7 @@ $email-secondary-colour: #ab0613;
       }
     }
 
-    __aside-text__frequency {
+    &__aside-text__frequency {
       color: $email-text-colour;
       float: right;
       font-weight: bold;
