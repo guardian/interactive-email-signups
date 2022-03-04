@@ -25,6 +25,8 @@ $text-colour: #000000;
 $secondary-colour: #c70000;
 
 .interactive-wrapper {
+  overflow-x: hidden;
+
   .email-signup__lozenge {
     margin: 0px -4px;
   }
@@ -425,9 +427,6 @@ $secondary-colour: #c70000;
 .ios {
   .interactive-wrapper {
     .inline-svg {
-      display: none;
-    }
-    .u-h {
       display: none;
     }
     .inline-custom__png {

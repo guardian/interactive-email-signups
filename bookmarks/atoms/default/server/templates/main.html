@@ -1,5 +1,5 @@
 <div class="interactive-wrapper">
-  <div class="illustration-container">
+  <div class="illustration-container" role="img" aria-describedby="bookmarks-interactive-illustration-description">
     <div class="inline-custom__png"></div>
     <div class="inline-svg">
       <svg
@@ -9,6 +9,7 @@
         height="480"
         viewBox="0 0 3004 480"
       >
+      <desc id="bookmarks-interactive-illustration-description">A person reading on a comfortable chair while the book transports their imagination to a distant planet populated with various fictional characters.</desc>
         <g id="Shooting_Stars">
           <g id="shooting-star-4">
             <linearGradient
@@ -248,10 +249,11 @@
   <div class="content email-signup-main">
     <div class="gs-container">
       <div class="content__main-column main__column--horizontal-bar">
-        <header class="email-signup-header">
-          <span class="u-h">Bookmarks</span>
-          <span class="email-signup-header__heading">
+        <section class="email-signup-header">
+          <span class="email-signup-header__heading" aria-label="Bookmarks">
             <svg
+              role="img"
+              aria-hidden="true"
               width="405"
               height="78"
               viewBox="0 0 405 78"
@@ -285,7 +287,7 @@
             </a>
 
           </p>
-        </header>
+        </section>
 
         <div class="custom-email">
           <div class="email-signup email-signup__lozenge">
