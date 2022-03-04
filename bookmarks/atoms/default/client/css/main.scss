@@ -264,7 +264,7 @@ $email-secondary-colour: #ab0613;
       fill: $email-text-colour;
     }
 
-    .email-signup__aside-text {
+    &__aside-text {
       @include fs-textSans(2);
       color: $email-secondary-colour;
       width: 64%;
@@ -275,59 +275,59 @@ $email-secondary-colour: #ab0613;
       }
     }
 
-    .email-signup__aside-text__frequency {
+    &__aside-text__frequency {
       color: $email-text-colour;
       float: right;
       font-weight: bold;
     }
   }
 
-  .email-signup-header__heading {
-    display: inline-block;
-    padding-top: $gs-baseline / 2;
-
-    svg {
-      height: 30px;
-      width: 159px;
-
-      path {
-        fill: $text-colour;
-      }
-
-      @include mq($from: tablet) {
-        height: 39px;
-        width: 206px;
-      }
-    }
-  }
-
-  .email-signup-header__intro {
-    @include fs-header(2);
-    margin: 0;
-    line-height: 0;
-    padding-top: $gs-baseline / 2;
-    padding-bottom: $gs-baseline;
-
-    @include mq($from: tablet) {
-      @include fs-header(3);
-      line-height: 0;
-    }
-  }
-
-  .email-signup-header__text {
-    @include fs-bodyCopy(2);
-    margin-top: $gs-baseline / 2;
-
-    @include mq($from: tablet) {
-      @include fs-bodyCopy(3);
-      margin-top: $gs-baseline;
-    }
-  }
-
   .email-signup-header {
     color: $text-colour;
 
-    a {
+    &__heading {
+      display: inline-block;
+      padding-top: $gs-baseline / 2;
+  
+      svg {
+        height: 30px;
+        width: 159px;
+  
+        path {
+          fill: $text-colour;
+        }
+  
+        @include mq($from: tablet) {
+          height: 39px;
+          width: 206px;
+        }
+      }
+    }
+  
+    &__intro {
+      @include fs-header(2);
+      margin: 0;
+      line-height: 0;
+      padding-top: $gs-baseline / 2;
+      padding-bottom: $gs-baseline;
+  
+      @include mq($from: tablet) {
+        @include fs-header(3);
+        line-height: 0;
+      }
+    }
+  
+    &__text {
+      @include fs-bodyCopy(2);
+      margin-top: $gs-baseline / 2;
+  
+      @include mq($from: tablet) {
+        @include fs-bodyCopy(3);
+        margin-top: $gs-baseline;
+      }
+    }
+
+    &__link {
       display: inline-block;
       text-decoration: none !important;
       color: $secondary-colour;
@@ -364,14 +364,6 @@ $email-secondary-colour: #ab0613;
           }
         }
       }
-    }
-  }
-}
-// This is a hack so that the email box can be viewed on Android devices - Frank
-.android {
-  .interactive-wrapper {
-    .email-signup-sample {
-      height: 300px;
     }
   }
 }
