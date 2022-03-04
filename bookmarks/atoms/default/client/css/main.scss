@@ -256,6 +256,10 @@ $email-secondary-colour: #ab0613;
     padding: 8px 6px;
     border-radius: 8px;
 
+    iframe {
+      min-height: 90px;
+    }
+
     .inline-clock {
       fill: $email-text-colour;
     }
@@ -276,10 +280,6 @@ $email-secondary-colour: #ab0613;
       float: right;
       font-weight: bold;
     }
-  }
-
-  .email-signup-header {
-    color: $text-colour;
   }
 
   .email-signup-header__heading {
@@ -325,6 +325,8 @@ $email-secondary-colour: #ab0613;
   }
 
   .email-signup-header {
+    color: $text-colour;
+
     a {
       display: inline-block;
       text-decoration: none !important;
