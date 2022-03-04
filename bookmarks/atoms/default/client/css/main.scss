@@ -20,16 +20,16 @@ $comment-support-4: #e6711b;
 
 $gs-baseline: 12px;
 
-$background-colour: $white;
-$text-colour: #000000;
-$secondary-colour: #c70000;
+$background-colour: $review-support-1;
+$text-colour: $white;
+$secondary-colour: $comment-support-3;
+
+$email-background-colour: $white;
+$email-text-colour: $neutral-1;
+$email-secondary-colour: #ab0613;
 
 .interactive-wrapper {
   overflow-x: hidden;
-
-  .email-signup__lozenge {
-    margin: 0px -4px;
-  }
 
   .is-hidden {
     display: none;
@@ -43,23 +43,6 @@ $secondary-colour: #c70000;
   .interactive-atom {
     margin: 0 !important;
     overflow-x: hidden !important;
-  }
-
-  .email-sub__form * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  .email-sub__form {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-family: "Guardian Text Sans Web", "Helvetica Neue", Helvetica, Arial,
-      "Lucida Grande", sans-serif;
-  }
-
-  .email-sub__message__headline {
-    color: white;
   }
 
   .inline-envelope {
@@ -269,49 +252,17 @@ $secondary-colour: #c70000;
 
   .custom-email {
     margin-top: $gs-baseline * 2;
-
-    .email-sub__lozenge {
-      border: 0.0625rem solid $background-colour;
-      border-radius: 100px;
-      float: left;
-      width: 70%;
-      height: 3em;
-      margin-bottom: $gs-baseline;
-
-      &:hover,
-      &:focus,
-      &:active {
-        border-color: darken($secondary-colour, 10%);
-      }
-
-      @include mq($until: tablet) {
-        width: 100%;
-      }
-    }
-
-    .email-sub__lozenge--input {
-      padding: 0.667em 1.25em;
-    }
-
-    .email-sub__lozenge--submit {
-      color: $neutral-7;
-      width: 25%;
-      margin: 0px 0px $gs-baseline 3%;
-      background-color: inherit;
-
-      @include mq($until: tablet) {
-        width: 100%;
-        margin-left: 0;
-      }
-    }
+    background-color: $email-background-colour;
+    padding: 8px 6px;
+    border-radius: 8px;
 
     .inline-clock {
-      fill: $text-colour;
+      fill: $email-text-colour;
     }
 
     .email-signup__aside-text {
       @include fs-textSans(2);
-      color: $secondary-colour;
+      color: $email-secondary-colour;
       width: 64%;
       margin: 0% 4px;
 
@@ -321,7 +272,7 @@ $secondary-colour: #c70000;
     }
 
     .email-signup__aside-text__frequency {
-      color: $text-colour;
+      color: $email-text-colour;
       float: right;
       font-weight: bold;
     }
@@ -407,7 +358,7 @@ $secondary-colour: #c70000;
           }
 
           path {
-            fill: $white;
+            fill: $background-colour;
           }
         }
       }
