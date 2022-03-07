@@ -3,6 +3,8 @@
 @import "palette";
 @import "gu_grid";
 // @import "enhancer";
+$yellow-accent: #FFE500;
+
 
 $neutral-1: #333333;
 $neutral-7: #484848;
@@ -25,7 +27,9 @@ $text-colour: #000000;
 $secondary-colour: #c70000;
 
 
-$yellow-accent: #FFE500;
+@import "preview-figure";
+@import "content-section";
+@import "share-section";
 
 .element-atom,
 .interactive-atom {
@@ -108,48 +112,9 @@ $yellow-accent: #FFE500;
     @include leftContentPadding();
   }
 
-  .content-section {
-    &__category-line {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-bottom: 8px;
-    }
 
-    &__category-svg-container {
-      background-color: $yellow-accent;
-      padding: 6px;
-      border-radius: 50%;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 3px;
-    }
-    
-    &__category-text {
-      @include fs-textSans(2);
-      font-size: 14px;
-      line-height: 18.9px;
-      font-weight: 700;
-    }
-
-    h1 {
-      font-size: 34px;
-      line-height: 39.1px;
-      font-weight: 700;
-      font-family: $f-serif-headline;
-      margin-bottom: 12px;
-    }
-    
-    &__copy-text {
-      font-size: 17px;
-      line-height: 25.5px;
-      margin-bottom: 16px;
-    }
-  }
 
   .embed-section {
-
     margin-bottom: 38px;
 
     iframe {
@@ -164,67 +129,6 @@ $yellow-accent: #FFE500;
     }
   }
 
-  .share-section {
-    display: flex;
-    align-items: center;
-
-    h2 {
-      font-family: $f-sans-serif-text;
-      font-size: 17px;
-      line-height:  22.95px;
-      font-weight: 700;
-      color: #333333;
-      margin-right: 10px;
-    }
-
-    ul {
-      float: left;
-    }
-
-    li {
-      padding-right: 3px;
-      float: left;
-      min-width: 32px;
-      cursor: pointer;
-      margin-top: 3px;
-    }
-
-    span {
-      border: 1px solid #121212;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      min-width: 32px;
-      max-width: 100%;
-      width: auto;
-      height: 32px;
-      border-radius: 50%;
-      display: inline-block;
-      vertical-align: middle;
-      position: relative;
-      box-sizing: content-box;
-
-      fill: #121212;
-
-      &:hover {
-				background-color: #121212;
-				border-color: #121212;
-				fill: white;
-			}
-    
-      svg {
-        height: 88%;
-        width: 88%;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        margin: auto;
-        position: absolute;
-      }
-    }
-
-  }
 
   .column-layout {
     display: flex;
