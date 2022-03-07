@@ -1,0 +1,33 @@
+.gs-container {
+  position: relative;
+  margin: auto;
+  @include mq(tablet) {
+    max-width: 740px;
+  }
+  @include mq(desktop) {
+    max-width: 980px;
+  }
+  @include mq(leftCol) {
+    max-width: 1140px;
+  }
+  @include mq(wide) {
+    max-width: 1300px;
+  }
+}
+
+.content__main-column {
+  position: relative;
+  @include mq(tablet) {
+    max-width: 620px;
+  }
+  @include mq(desktop) {
+    margin-left: 0px;
+    margin-right: 310px;
+  }
+  @include mq(leftCol) {
+    margin-left: 150px;
+  }
+  @include mq(wide) {
+    margin-left: 230px;
+  }
+}

@@ -1,0 +1,78 @@
+@import "fonts";
+@import "mq";
+@import "palette";
+@import "gu_grid";
+// @import "enhancer";
+
+$neutral-1: #333333;
+$neutral-7: #484848;
+$neutral-2: #767676;
+$neutral-3: #bdbdbd;
+$illustration-bg: #000000;
+$white: #ffffff;
+
+$comment-main-1: #c05303;
+$comment-main-2: #ff9b0b;
+$comment-support-1: #7d7569;
+$review-support-1: #615b52;
+$comment-support-3: #ffce4b;
+$comment-support-4: #e6711b;
+
+$gs-baseline: 12px;
+
+$background-colour: $white;
+$text-colour: #000000;
+$secondary-colour: #c70000;
+
+
+
+.element-atom,
+.interactive-atom {
+  margin: 0 !important;
+  overflow-x: hidden !important;
+}
+
+.inline-envelope {
+  svg {
+    fill: black;
+  }
+}
+
+.gs-container {
+  box-sizing: border-box;
+  padding: 0 8px;
+
+  &.l-header__inner {
+    padding: 0;
+  }
+}
+
+.interactive-wrapper--first-edition {
+
+  .column-layout {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__left {
+      flex: 1;
+    }
+
+    &__right {
+      flex: 1;
+    }
+
+  }
+
+}
+
+
+
+.android,
+.ios {
+
+}
