@@ -20,413 +20,348 @@ $comment-support-4: #e6711b;
 
 $gs-baseline: 12px;
 
-$background-colour: $white;
-$text-colour: #000000;
-$secondary-colour: #c70000;
+$background-colour: $review-support-1;
+$text-colour: $white;
+$secondary-colour: $comment-support-3;
 
-.email-signup__lozenge {
-  margin: 0px -4px;
-}
+$email-background-colour: $white;
+$email-text-colour: $neutral-1;
+$email-secondary-colour: #ab0613;
 
-.is-hidden {
-  display: none;
-}
+.interactive-wrapper {
+  overflow-x: hidden;
 
-.is-immersive {
-  background-color: $background-colour;
-}
-
-.element-atom,
-.interactive-atom {
-  margin: 0 !important;
-  overflow-x: hidden !important;
-}
-
-.email-sub__form * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.email-sub__form {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-family: "Guardian Text Sans Web", "Helvetica Neue", Helvetica, Arial,
-    "Lucida Grande", sans-serif;
-}
-
-.email-sub__message__headline {
-  color: white;
-}
-
-.inline-envelope {
-  svg {
-    fill: black;
+  .is-hidden {
+    display: none;
   }
-}
 
-.gs-container {
-  box-sizing: border-box;
-  padding: 0 8px;
-
-  &.l-header__inner {
-    padding: 0;
+  .is-immersive {
+    background-color: $background-colour;
   }
-}
 
-.content {
-  padding-bottom: $gs-baseline * 4;
-}
-
-.illustration-container {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  background-color: $illustration-bg;
-  min-height: 10rem;
-  height: 220px;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-
-  @include mq(tablet) {
-    height: 360px;
+  .element-atom,
+  .interactive-atom {
+    margin: 0 !important;
+    overflow-x: hidden !important;
   }
-}
 
-.inline-custom__png {
-  display: block;
-  overflow: hidden;
-  background-image: url("https://uploads.guim.co.uk/2020/06/11/bookmarks-background.svg");
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-size: auto 100%;
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-  margin: auto;
-  z-index: 5;
-}
-
-// .inline-custom__png {
-//   display: block;
-//   overflow: hidden;
-//   background-image: url("<%= path %>/header/test-2.png");
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-//   background-size: auto 100%;
-//   background-position: 50% 0;
-//   background-repeat: no-repeat;
-//   margin: auto;
-//   z-index: 10;
-// }
-
-.inline-svg {
-  overflow: hidden;
-  position: absolute;
-  height: 100%;
-  width: auto;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: auto;
-  z-index: 5;
-  svg {
-    height: 220px;
-  }
-  @include mq(tablet) {
+  .inline-envelope {
     svg {
+      fill: black;
+    }
+  }
+
+  .gs-container {
+    box-sizing: border-box;
+    padding: 0 8px;
+
+    &.l-header__inner {
+      padding: 0;
+    }
+  }
+
+  .content {
+    padding-bottom: $gs-baseline * 4;
+  }
+
+  .illustration-container {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background-color: $illustration-bg;
+    min-height: 10rem;
+    height: 220px;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+
+    @include mq(tablet) {
       height: 360px;
     }
   }
-}
 
-#Rocket {
-  transform-origin: center center;
-  animation-name: rotate-rocket;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
+  .inline-custom__png {
+    display: block;
+    overflow: hidden;
+    background-image: url("https://uploads.guim.co.uk/2020/06/11/bookmarks-background.svg");
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: auto 100%;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    margin: auto;
+    z-index: 3;
+  }
 
-@keyframes rotate-rocket {
-  20% {
-    transform: translate(-9px, -13px) rotate(-8deg);
-  }
-  40% {
-    transform: translate(-4px, -5px) rotate(4deg);
-  }
-  60% {
-    transform: translate(-0px, -0px) rotate(-12deg);
-  }
-  80% {
-    transform: translate(-12px, -6px) rotate(-12deg);
-  }
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-}
-
-#Burner {
-  animation-name: o-change;
-  animation-duration: 6s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes o-change {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-#shooting-star-2 {
-  animation-name: moving-star-2;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes moving-star-2 {
-  0% {
-    opacity: 0;
-    transform: translate(-300px, 200px);
-  }
-  5% {
-    opacity: 1;
-  }
-  15% {
-    opacity: 1;
-  }
-  20% {
-    transform: translate(300px, 40px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(300px, 40px);
-    opacity: 0;
-  }
-}
-
-#shooting-star-4 {
-  animation-name: moving-star-4;
-  animation-delay: 2s;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes moving-star-4 {
-  0% {
-    opacity: 0;
-    transform: translate(300px, -80px);
-  }
-  5% {
-    opacity: 1;
-  }
-  15% {
-    opacity: 1;
-  }
-  20% {
-    transform: translate(-120px, 240px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-120px, 240px);
-    opacity: 0;
-  }
-}
-
-.email-signup {
-  background-color: $background-colour;
-  min-width: 16em;
-}
-
-.main__column--horizontal-bar:before {
-  content: "";
-  display: block;
-  border-bottom: 2px solid $background-colour;
-}
-
-.email-signup-main {
-  background-color: $background-colour;
-}
-
-.custom-email {
-  margin-top: $gs-baseline * 2;
-
-  .email-sub__lozenge {
-    border: 0.0625rem solid $background-colour;
-    border-radius: 100px;
-    float: left;
-    width: 70%;
-    height: 3em;
-    margin-bottom: $gs-baseline;
-
-    &:hover,
-    &:focus,
-    &:active {
-      border-color: darken($secondary-colour, 10%);
+  .inline-svg {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    z-index: 3;
+    svg {
+      height: 220px;
     }
-
-    @include mq($until: tablet) {
-      width: 100%;
+    @include mq(tablet) {
+      svg {
+        height: 360px;
+      }
     }
   }
 
-  .email-sub__lozenge--input {
-    padding: 0.667em 1.25em;
+  #Rocket {
+    transform-origin: center center;
+    animation-name: rotate-rocket;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
-  .email-sub__lozenge--submit {
-    color: $neutral-7;
-    width: 25%;
-    margin: 0px 0px $gs-baseline 3%;
-    background-color: inherit;
-
-    @include mq($until: tablet) {
-      width: 100%;
-      margin-left: 0;
+  @keyframes rotate-rocket {
+    20% {
+      transform: translate(-9px, -13px) rotate(-8deg);
+    }
+    40% {
+      transform: translate(-4px, -5px) rotate(4deg);
+    }
+    60% {
+      transform: translate(-0px, -0px) rotate(-12deg);
+    }
+    80% {
+      transform: translate(-12px, -6px) rotate(-12deg);
+    }
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg);
     }
   }
 
-  .inline-clock {
-    fill: $text-colour;
+  #Burner {
+    animation-name: o-change;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
-  .email-signup__aside-text {
-    @include fs-textSans(2);
-    color: $secondary-colour;
-    width: 64%;
-    margin: 0% 4px;
-
-    @include mq($until: tablet) {
-      width: 97%;
+  @keyframes o-change {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
     }
   }
 
-  .email-signup__aside-text__frequency {
+  #shooting-star-2 {
+    animation-name: moving-star-2;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes moving-star-2 {
+    0% {
+      opacity: 0;
+      transform: translate(-300px, 200px);
+    }
+    5% {
+      opacity: 1;
+    }
+    15% {
+      opacity: 1;
+    }
+    20% {
+      transform: translate(300px, 40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(300px, 40px);
+      opacity: 0;
+    }
+  }
+
+  #shooting-star-4 {
+    animation-name: moving-star-4;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes moving-star-4 {
+    0% {
+      opacity: 0;
+      transform: translate(300px, -80px);
+    }
+    5% {
+      opacity: 1;
+    }
+    15% {
+      opacity: 1;
+    }
+    20% {
+      transform: translate(-120px, 240px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-120px, 240px);
+      opacity: 0;
+    }
+  }
+
+  .email-signup {
+    background-color: $background-colour;
+    min-width: 16em;
+  }
+
+  .main__column--horizontal-bar:before {
+    content: "";
+    display: block;
+    border-bottom: 2px solid $background-colour;
+  }
+
+  .email-signup-main {
+    background-color: $background-colour;
+  }
+
+  .custom-email {
+    margin-top: $gs-baseline * 2;
+    background-color: $email-background-colour;
+    padding: 8px 6px;
+    border-radius: 8px;
+
+    iframe {
+      min-height: 90px;
+    }
+
+    .inline-clock {
+      fill: $email-text-colour;
+    }
+
+    &__aside-text {
+      @include fs-textSans(2);
+      color: $email-secondary-colour;
+      width: 64%;
+      margin: 0% 4px;
+
+      @include mq($until: tablet) {
+        width: 97%;
+      }
+    }
+
+    &__aside-text__frequency {
+      color: $email-text-colour;
+      float: right;
+      font-weight: bold;
+    }
+  }
+
+  .email-signup-header {
     color: $text-colour;
-    float: right;
-    font-weight: bold;
-  }
-}
 
-.email-signup-header {
-  color: $text-colour;
-}
-
-.email-signup-header__heading {
-  display: inline-block;
-  padding-top: $gs-baseline / 2;
-
-  svg {
-    height: 30px;
-    width: 159px;
-
-    path {
-      fill: $text-colour;
-    }
-
-    @include mq($from: tablet) {
-      height: 39px;
-      width: 206px;
-    }
-  }
-}
-
-.email-signup-header__intro {
-  @include fs-header(2);
-  margin: 0;
-  line-height: 0;
-  padding-top: $gs-baseline / 2;
-  padding-bottom: $gs-baseline;
-
-  @include mq($from: tablet) {
-    @include fs-header(3);
-    line-height: 0;
-  }
-}
-
-.email-signup-header__text {
-  @include fs-bodyCopy(2);
-  margin-top: $gs-baseline / 2;
-
-  @include mq($from: tablet) {
-    @include fs-bodyCopy(3);
-    margin-top: $gs-baseline;
-  }
-}
-
-.email-signup-header {
-  a {
-    display: inline-block;
-    text-decoration: none !important;
-    color: $secondary-colour;
-    &:hover {
-      color: darken($secondary-colour, 10%);
-    }
-  }
-
-  .link-with-arrow {
-    .link-with-arrow__arrow {
-      vertical-align: text-bottom;
-      margin-bottom: 2px;
+    &__heading {
       display: inline-block;
-
-      circle {
-        stroke: $secondary-colour;
-        fill: unset;
+      padding-top: $gs-baseline / 2;
+  
+      svg {
+        height: 30px;
+        width: 159px;
+  
+        path {
+          fill: $text-colour;
+        }
+  
+        @include mq($from: tablet) {
+          height: 39px;
+          width: 206px;
+        }
       }
-
-      path {
-        fill: $secondary-colour;
+    }
+  
+    &__intro {
+      @include fs-header(2);
+      margin: 0;
+      line-height: 0;
+      padding-top: $gs-baseline / 2;
+      padding-bottom: $gs-baseline;
+  
+      @include mq($from: tablet) {
+        @include fs-header(3);
+        line-height: 0;
+      }
+    }
+  
+    &__text {
+      @include fs-bodyCopy(2);
+      margin-top: $gs-baseline / 2;
+  
+      @include mq($from: tablet) {
+        @include fs-bodyCopy(3);
+        margin-top: $gs-baseline;
       }
     }
 
-    &:hover {
+    &__link {
+      display: inline-block;
+      text-decoration: none !important;
+      color: $secondary-colour;
+      &:hover {
+        color: darken($secondary-colour, 10%);
+      }
+    }
+
+    .link-with-arrow {
       .link-with-arrow__arrow {
+        vertical-align: text-bottom;
+        margin-bottom: 2px;
+        display: inline-block;
+
         circle {
-          fill: darken($secondary-colour, 10%);
-          stroke: unset;
+          stroke: $secondary-colour;
+          fill: unset;
         }
 
         path {
-          fill: $white;
+          fill: $secondary-colour;
+        }
+      }
+
+      &:hover {
+        .link-with-arrow__arrow {
+          circle {
+            fill: darken($secondary-colour, 10%);
+            stroke: unset;
+          }
+
+          path {
+            fill: $background-colour;
+          }
         }
       }
     }
-  }
-}
-
-// This is a hack so that the email box can be viewed on Android devices - Frank
-.email-signup-sample {
-  .android & {
-    height: 300px;
   }
 }
 
 .android,
 .ios {
-  .inline-svg {
-    display: none;
-  }
-  .u-h {
-    display: none;
-  }
-  .inline-custom__png {
-    display: block;
+  .interactive-wrapper {
+    .inline-svg {
+      display: none;
+    }
+    .inline-custom__png {
+      display: block;
+    }
   }
 }
