@@ -1,0 +1,18 @@
+.interactive-wrapper {
+    .also-banner {
+        display: flex;
+        padding: 8px;
+        background-color: #052962;
+        color: #fff;
+        h2 {
+            font-family: $f-serif-headline;
+            color: $yellow-accent;
+            font-size: 28px;
+            line-height: 28px;
+        }
+
+        section {
+            flex: 1;
+        }
+    }
+}
