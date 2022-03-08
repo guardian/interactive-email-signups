@@ -53,30 +53,6 @@ $secondary-colour: #c70000;
 
 .interactive-wrapper--first-edition {
 
-  .inner-frame {
-    margin: 0 auto;
-    position: relative;
-    box-sizing: border-box;
-    padding: 0 0;
-    overflow: hidden;
-
-
-    @include mq(tablet) {
-      max-width: 740px;
-      border-left: 1px solid #dcdcdc;
-      border-right: 1px solid #dcdcdc;
-    }
-    @include mq(desktop) {
-      max-width: 980px;
-    }
-    @include mq(leftCol) {
-      max-width: 1140px;
-    }
-    @include mq(wide) {
-      max-width: 1300px;
-    }
-  }
-
   .gs-container {
     box-sizing: border-box;
     padding: 0 8px;
@@ -96,12 +72,40 @@ $secondary-colour: #c70000;
     height: calc(0.12rem * 7 + 1px);
   }
 
-  .top-rule {
-    border-top: 1px solid #dcdcdc;
+  .row-inner {
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 0;
+    overflow: hidden;
+
+    @include mq(tablet) {
+      max-width: 740px;
+      border-left: 1px solid #dcdcdc;
+      border-right: 1px solid #dcdcdc;
+    }
+    @include mq(desktop) {
+      max-width: 980px;
+    }
+    @include mq(leftCol) {
+      max-width: 1140px;
+    }
+    @include mq(wide) {
+      max-width: 1300px;
+    }
   }
 
-  .shaded {
+  .shaded-row-wrapper {
     background-color: #f6f6f6;
+
+    &--blue {
+      background-color: #C1D8FC;
+
+      .row-inner {
+        border-left: none;
+        border-right: none;
+      }
+    }
   }
 
   .section-title {
