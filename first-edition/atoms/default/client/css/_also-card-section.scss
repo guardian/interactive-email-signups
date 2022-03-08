@@ -1,7 +1,9 @@
 .interactive-wrapper {
     .also-card-section {
-        margin-top: 60px;
-        margin-bottom: 20px;
+
+        .l-row__left {
+            padding-left: 0;
+        }
 
         h2 {
             font-family: $f-serif-headline;

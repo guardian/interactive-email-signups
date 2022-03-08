@@ -1,0 +1,17 @@
+.interactive-wrapper {
+    .header-section {
+
+        
+        .l-row {
+            background-color: #052962;
+            padding: 10px 0;
+        }
+        
+        img {
+            @include mq(desktop) {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
