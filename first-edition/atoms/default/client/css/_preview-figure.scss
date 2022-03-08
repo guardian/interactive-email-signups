@@ -1,10 +1,13 @@
 .interactive-wrapper--first-edition {
   .preview-figure {
-    background-color: grey;
-    min-height: 360px;
     display: flex;
     border-radius: 10px 10px 0px 0px;
     overflow: hidden;
+
+    &__svg{
+      width: 100%;
+      height: auto;
+    }
 
     a {
       display: block;
