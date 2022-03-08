@@ -12,19 +12,33 @@
             font-weight: 700;
         }
 
-        &__list {
-            display: flex;
+        &__list {    
+            @include mq(tablet) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+            }
         }
 
         &__card {
-            flex-basis: 240px;
+            flex-basis: 236px;
             box-sizing: border-box;
-            padding: 0 10px;
-            border-left: 1px solid gray;
+            padding: 0 8px;
+            margin-bottom: 10px;
+        }
 
-            &:first-child {
-                padding-left: 0;
-                border-left: none;
+        &__block-link {
+            display: inline-flex;
+
+            text-decoration: none;
+            color: inherit;
+            &:hover,&:visited,&:active{
+                color: inherit;
+            }
+
+            @include mq(tablet) {
+                display: inline-block;
             }
         }
 
@@ -33,9 +47,21 @@
             background-color: gray;
             width: 220px;
             height: 132px;
+            flex: 1 0 220px;
         }
 
         &__card-text {
+            padding-left: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            @include mq(tablet) {
+                padding-left: 0;
+            }
+        }
+
+        &__card-description {
             @include fs-textSans(2);
         }
     }
