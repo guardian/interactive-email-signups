@@ -31,6 +31,7 @@ $secondary-colour: #c70000;
 @import "content-section";
 @import "share-section";
 @import "also-banner";
+@import "also-card-section";
 
 .element-atom,
 .interactive-atom {
@@ -105,6 +106,10 @@ $secondary-colour: #c70000;
         border-left: none;
         border-right: none;
       }
+    }
+
+    &--space-below {
+      margin-bottom: 60px;
     }
   }
 

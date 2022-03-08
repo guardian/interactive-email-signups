@@ -1,0 +1,40 @@
+.interactive-wrapper {
+    .also-card-section {
+        margin-top: 60px;
+        margin-bottom: 20px;
+
+        h2 {
+            font-family: $f-serif-headline;
+            font-size: 24px;
+            line-height: 27.6px;
+            font-weight: 700;
+        }
+
+        &__list {
+            display: flex;
+        }
+
+        &__card {
+            flex-basis: 240px;
+            box-sizing: border-box;
+            padding: 0 10px;
+            border-left: 1px solid gray;
+
+            &:first-child {
+                padding-left: 0;
+                border-left: none;
+            }
+        }
+
+        &__graphic {
+            display: inline-block;
+            background-color: gray;
+            width: 220px;
+            height: 132px;
+        }
+
+        &__card-text {
+            @include fs-textSans(2);
+        }
+    }
+}
