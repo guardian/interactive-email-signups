@@ -37,5 +37,22 @@
       line-height: 25.5px;
       margin-bottom: 16px;
     }
+
+    &__privacy {
+      font-family: $f-sans-serif-text;
+      font-size: 12px;
+      line-height: 16.2px;
+      color: #121212;
+      padding-bottom: 18px;
+
+      &--bold {
+        font-weight: 700;
+      }
+
+      a, a:visited, a:active {
+        text-decoration: underline;
+        color: inherit;
+      }
+    }
   }
 }
