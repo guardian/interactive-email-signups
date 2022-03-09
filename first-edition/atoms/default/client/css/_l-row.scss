@@ -55,6 +55,7 @@
       flex: 1 1;
       @include mq(desktop) {
           padding-left: 20px;
+          padding-right: 13px;
       }
     }
 
@@ -92,10 +93,21 @@
 
     &__left {
       flex: 1;
+
+      @include mq(tablet) {
+        padding-right: 9px;
+      }
+  
+      &--flex {
+        display: flex;
+      }
     }
 
     &__right {
       flex: 1;
+      @include mq(tablet) {
+        padding-left: 9px;
+      }
     }
   }
 }
