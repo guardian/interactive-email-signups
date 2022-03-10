@@ -71,7 +71,9 @@
 
     &--20-bottom {
         @include allCells() {
+          @include mq(desktop) {
             padding-bottom: 20px;
+          }
         }
     }
 
@@ -81,33 +83,4 @@
     }
   }
 
-  .column-layout {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 18px;
-
-    @include mq(tablet) {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    &__left {
-      flex: 1;
-
-      @include mq(tablet) {
-        padding-right: 9px;
-      }
-  
-      &--flex {
-        display: flex;
-      }
-    }
-
-    &__right {
-      flex: 1;
-      @include mq(tablet) {
-        padding-left: 9px;
-      }
-    }
-  }
 }

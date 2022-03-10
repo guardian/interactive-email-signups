@@ -2,6 +2,7 @@
   .share-section {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 
     h2 {
       font-family: $f-sans-serif-text;
@@ -17,7 +18,7 @@
     }
 
     li {
-      padding-right: 3px;
+      padding-right: 8px;
       float: left;
       min-width: 32px;
       cursor: pointer;

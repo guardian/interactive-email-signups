@@ -31,17 +31,24 @@
     }
 
     h1 {
-      font-size: 34px;
-      line-height: 39.1px;
+      font-size: 42px;
+      line-height: 115%;
       font-weight: 700;
       font-family: $f-serif-headline;
       margin-bottom: 12px;
+      max-width: 7em; // keeps line breaking in right place
     }
     
     &__copy-text {
-      font-size: 17px;
-      line-height: 25.5px;
-      margin-bottom: 16px;
+      font-family: $f-serif-headline;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 115%;
+      margin-bottom: 10px;
+
+      @include mq(tablet) {
+        max-width: 20em;
+      }
     }
 
     &__privacy {
@@ -58,6 +65,36 @@
       a, a:visited, a:active {
         text-decoration: underline;
         color: inherit;
+      }
+    }
+  }
+
+  .column-layout {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 18px;
+
+    @include mq(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__left {
+      flex: 1;
+
+      @include mq(tablet) {
+        padding-right: 9px;
+      }
+  
+      &--flex {
+        display: flex;
+      }
+    }
+
+    &__right {
+      flex: 1.4;
+      @include mq(tablet) {
+        padding-left: 9px;
       }
     }
   }

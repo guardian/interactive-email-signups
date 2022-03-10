@@ -33,5 +33,18 @@
         font-weight: 700;
       }
     }
+
+    &--tablet {
+      display: none;
+      @include mq(tablet) {
+        display: flex;
+      }
+    }
+
+    &--mobile {
+      @include mq(tablet) {
+        display: none;
+      }
+    }
   }
 }

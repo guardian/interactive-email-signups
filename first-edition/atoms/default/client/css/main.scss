@@ -69,7 +69,7 @@ $secondary-colour: #c70000;
   }
 
   .embed-container {
-    margin-bottom: 38px;
+    margin-bottom: 20px;
 
     iframe {
       min-height: 60px;
@@ -80,6 +80,10 @@ $secondary-colour: #c70000;
       font-size: 15px;
       line-height: 20.25px;
       color: #333333;
+
+      b {
+        font-weight: 700;
+      }
     }
   }
 }
