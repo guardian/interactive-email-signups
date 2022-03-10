@@ -1,18 +1,105 @@
 .interactive-wrapper {
     .also-banner {
-        display: flex;
-        padding: 8px;
-        background-color: #052962;
-        color: #fff;;
+
+        .l-row {
+            background-color: #052962;
+            padding: 8px 10px;
+
+            @include mq (desktop) {
+                padding: 20px 12px;
+            }
+        }
+
         h2 {
             font-family: $f-serif-headline;
             color: $yellow-accent;
             font-size: 28px;
             line-height: 28px;
+            font-weight: 700;
+            max-width: 6em;
+            padding-bottom: 20px;
+        }
+    }
+    
+    .long-read-advert {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        border: 2px dashed #F6F6F6;
+        padding: 8px;
+        background-color: #650054;     
+        color: white;
+        text-decoration: none;
+        &:visited,&:active {
+            text-decoration: none;
+            color: white;
+        }
+        
+        font-family: $f-serif-headline;
+
+        @include mq (desktop) {
+            flex-direction: row;
+        }
+        
+        &__text {
+            
+            padding-bottom: 8px;
+
+            @include mq (desktop) {
+                flex-basis: 28em; //for line breaking
+                padding-left: 8px;
+                padding-right: 16px;
+            }
         }
 
-        section {
-            flex: 1;
+        &__title {
+            font-family: $f-serif-headline;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
+            text-align: left;
+        }
+
+        &__description {
+            font-family: $f-serif-headline;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        &__button {
+            
+            flex-shrink: 0;
+            align-self: flex-start;
+            border-radius: 30px;
+            padding: 6px 16px 6px 18px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            background-color: white;
+            font-family: $f-sans-serif-text;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 21px;
+            color: #052962;
+            
+
+            @include mq (desktop) {
+                align-self: flex-end;
+            }
+
+            svg {
+                fill: #052962;
+            }
         }
     }
 }
+
+
