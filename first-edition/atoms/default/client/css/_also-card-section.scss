@@ -50,6 +50,7 @@
     &__graphic {
       display: inline-block;
       max-height: 132px;
+      max-width: 220px;
 
       @include mq(tablet) {
         flex: unset;
@@ -58,6 +59,12 @@
       img, svg {
           height: auto;
           width: 100%;
+      }
+
+      img:not([src]) {
+        height: 132px;
+        width: 220px;
+        background-image: linear-gradient(45deg, black, transparent);
       }
     }
 
