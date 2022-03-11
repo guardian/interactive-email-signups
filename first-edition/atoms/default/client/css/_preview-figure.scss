@@ -42,6 +42,8 @@
     }
 
     &--mobile {
+      margin-bottom: 16px;
+
       @include mq(tablet) {
         display: none;
       }

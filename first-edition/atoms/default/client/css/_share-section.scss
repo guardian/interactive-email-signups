@@ -2,7 +2,10 @@
   .share-section {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+
+    @include mq(tablet) {
+      margin-bottom: 20px;
+    }
 
     h2 {
       font-family: $f-sans-serif-text;
