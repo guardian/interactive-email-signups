@@ -6,7 +6,14 @@ The `readme` in each interactive will explain how to run and deploy.
 
 Once deployed, these interactives can be inserted into an `immersive` article in Composer
 
+## Credentials
 If you want to deploy an interactive, you will need the correct credentials from Janus.
+
+The deployment scripts use a gulp plugin gulp-s3-upload, which by default looks for AWS credentials in your environment for the "default" (unnamed) profile. Janus saves credentials to a named profiles (e.g frontend, interactives etc) so you may need to prefix the deploy commands with the AWS_PROFILE parameter so the plugins uses the credntials from "interactives" profile. I.E 
+```
+AWS_PROFILE=interactives gulp deploylive
+```
+See documentations at: https://github.com/clineamb/gulp-s3-upload#including--setting-up-config
 
 ### Caveats
 
