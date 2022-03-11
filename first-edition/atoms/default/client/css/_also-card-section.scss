@@ -12,15 +12,18 @@
     }
 
     &__list {
-      @include mq(tablet) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     &__card {
-      flex-basis: 236px;
+      flex-basis: 50%;
+
+      @include mq(phablet) {
+        flex-basis: 236px;
+      }
+
       box-sizing: border-box;
       padding: 0 8px;
       margin-bottom: 10px;
@@ -38,13 +41,8 @@
         color: inherit;
       }
 
-      @include mq(mobileLandscape) {
-        display: inline-flex;
-      }
-
-      @include mq(tablet) {
-        flex-direction: column;
-      }
+      display: inline-flex;
+      flex-direction: column;
     }
 
     &__graphic {
@@ -52,18 +50,12 @@
       max-height: 132px;
       max-width: 220px;
 
-      @include mq(tablet) {
-        flex: unset;
-      }
-
       img, svg {
           height: auto;
           width: 100%;
       }
 
       img:not([src]) {
-        height: 132px;
-        width: 220px;
         background-image: linear-gradient(45deg, black, transparent);
       }
     }
