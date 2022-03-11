@@ -59,6 +59,35 @@ $secondary-colour: #c70000;
     height: calc(0.12rem * 7 + 1px);
   }
 
+
+  .category-line {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+
+    &__svg-container {
+      background-color: $yellow-accent;
+      padding: 6px;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 3px;
+    }
+    
+    &__text {
+      @include fs-textSans(2);
+      font-size: 14px;
+      line-height: 18.9px;
+      font-weight: 700;
+
+      &--white {
+        color: #fff;
+      }
+    }
+  }
+
   .page-legend {
     margin: 12px 0;
     @include fs-textSans(2);

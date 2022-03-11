@@ -1,29 +1,5 @@
 .interactive-wrapper--first-edition {
   .content-section {
-    &__category-line {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin-bottom: 8px;
-    }
-
-    &__category-svg-container {
-      background-color: $yellow-accent;
-      padding: 6px;
-      border-radius: 50%;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 3px;
-    }
-    
-    &__category-text {
-      @include fs-textSans(2);
-      font-size: 14px;
-      line-height: 18.9px;
-      font-weight: 700;
-    }
-
     &__main-wrapper {
       display: flex;
       flex-direction: column;
