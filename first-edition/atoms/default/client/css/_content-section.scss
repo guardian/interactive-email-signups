@@ -27,6 +27,30 @@
       }
     }
 
+    &__preview-link {
+      display: flex;
+      align-items: center;
+      @include fs-textSans(2);
+      padding: 10px 0 20px;
+      font-size: 14px;
+      font-weight: 700;
+      
+      color: #121212;
+      text-decoration: none;
+      &:visited, &:active {
+        text-decoration: none;
+        color: #121212;
+      }
+
+      svg {
+        margin: 0 11px 0 0;
+      }
+
+      @include mq(tablet) {
+        display: none;
+      }
+    }
+
     &__privacy {
       font-family: $f-sans-serif-text;
       font-size: 12px;
