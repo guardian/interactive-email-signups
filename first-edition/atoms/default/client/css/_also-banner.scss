@@ -5,7 +5,7 @@
             background-color: #052962;
             padding: 8px 10px;
 
-            @include mq (desktop) {
+            @include mq (tablet) {
                 padding: 20px 12px;
             }
         }
@@ -39,7 +39,7 @@
         
         font-family: $f-serif-headline;
 
-        @include mq (desktop) {
+        @include mq (tablet) {
             flex-direction: row;
         }
         
@@ -47,7 +47,7 @@
             
             padding-bottom: 8px;
 
-            @include mq (desktop) {
+            @include mq (tablet) {
                 flex-basis: 28em; //for line breaking
                 padding-left: 8px;
                 padding-right: 16px;
@@ -90,10 +90,10 @@
             font-weight: 700;
             line-height: 21px;
             color: #052962;
-            
 
-            @include mq (desktop) {
+            @include mq (tablet) {
                 align-self: flex-end;
+                margin-bottom: 10px;
             }
 
             svg {
