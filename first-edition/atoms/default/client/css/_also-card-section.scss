@@ -21,7 +21,7 @@
       flex-basis: 50%;
 
       @include mq(phablet) {
-        flex-basis: 236px;
+        flex-basis: 25%
       }
 
       box-sizing: border-box;
