@@ -65,15 +65,10 @@
     }
 
     &__card-text {
-      padding-left: 8px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       flex: 1;
-
-      @include mq(tablet) {
-        padding-left: 0;
-      }
     }
 
     &__card-description {
