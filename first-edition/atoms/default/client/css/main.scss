@@ -42,17 +42,6 @@ $secondary-colour: #c70000;
 
 .interactive-wrapper--first-edition {
 
-  .divider {
-    background-image: repeating-linear-gradient( to bottom, #DCDCDC, #DCDCDC 1px, transparent 1px, transparent 0.25rem );
-    background-repeat: repeat-x;
-    -webkit-background-position: top;
-    background-position: top;
-    -webkit-background-size: 1px calc(0.25rem * 7 + 1px);
-    background-size: 1px calc(0.25rem * 7 + 1px);
-    height: calc(0.12rem * 7 + 1px);
-  }
-
-
   .category-line {
     display: flex;
     align-items: center;
@@ -79,15 +68,6 @@ $secondary-colour: #c70000;
         color: #fff;
       }
     }
-  }
-
-  .page-legend {
-    margin: 12px 0;
-    @include fs-textSans(2);
-    font-weight: 400;
-    display: inline-block;
-    font-size: 16px;
-    padding-left: 5px;
   }
 
   .embed-container {
