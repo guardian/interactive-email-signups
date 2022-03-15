@@ -7,23 +7,27 @@
     }
 
     h1 {
-      font-size: 42px;
+      font-size: 34px;
       line-height: 115%;
       font-weight: 700;
       font-family: $f-serif-headline;
       margin-bottom: 12px;
       max-width: 7em; // keeps line breaking in right place
+
+      @include mq(tablet) {
+        font-size: 42px;
+      }
     }
     
     &__copy-text {
       font-family: $f-serif-headline;
       font-weight: 300;
-      font-size: 20px;
+      font-size: 17px;
       line-height: 115%;
       margin-bottom: 10px;
 
       @include mq(tablet) {
-        max-width: 20em;
+        font-size: 20px;
       }
     }
 
