@@ -250,20 +250,20 @@ $email-secondary-colour: #ab0613;
       fill: $email-text-colour;
     }
 
-    &__aside-text {
+    &__caption {
       @include fs-textSans(2);
       color: $email-secondary-colour;
-      width: 64%;
-      margin: 0% 4px;
-
-      @include mq($until: tablet) {
-        width: 97%;
-      }
+      width: 100%;
+      margin: 0 4px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      
+      max-width: 390px;
     }
 
-    &__aside-text__frequency {
+    &__frequency {
       color: $email-text-colour;
-      float: right;
       font-weight: bold;
     }
   }
