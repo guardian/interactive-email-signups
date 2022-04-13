@@ -73,6 +73,7 @@
 
     &__card-description {
       @include fs-textSans(2);
+      color: #121212;
       padding-bottom: 4px;
 
       @include mq(tablet) {
