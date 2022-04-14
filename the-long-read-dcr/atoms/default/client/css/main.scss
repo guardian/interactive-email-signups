@@ -1,0 +1,367 @@
+@import "fonts";
+@import "mq";
+@import "palette";
+@import "gu_grid";
+// @import "enhancer";
+
+$neutral-1: #333333;
+$neutral-7: #484848;
+$neutral-2: #767676;
+$neutral-3: #bdbdbd;
+$illustration-bg: #000000;
+$white: #ffffff;
+
+$comment-main-1: #c05303;
+$comment-main-2: #ff9b0b;
+$comment-support-1: #7d7569;
+$review-support-1: #615b52;
+$comment-support-3: #ffce4b;
+$comment-support-4: #e6711b;
+
+$gs-baseline: 12px;
+
+$background-colour: $review-support-1;
+$text-colour: $white;
+$secondary-colour: $comment-support-3;
+
+$email-background-colour: $white;
+$email-text-colour: $neutral-1;
+$email-secondary-colour: #ab0613;
+
+.interactive-wrapper {
+  overflow-x: hidden;
+
+  .is-hidden {
+    display: none;
+  }
+
+  .is-immersive {
+    background-color: $background-colour;
+  }
+
+  .element-atom,
+  .interactive-atom {
+    margin: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .inline-envelope {
+    svg {
+      fill: black;
+    }
+  }
+
+  .gs-container {
+    box-sizing: border-box;
+    padding: 0 8px;
+
+    &.l-header__inner {
+      padding: 0;
+    }
+  }
+
+  .content {
+    padding-bottom: $gs-baseline * 4;
+  }
+
+  .illustration-container {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background-color: $illustration-bg;
+    min-height: 10rem;
+    height: 220px;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+
+    @include mq(tablet) {
+      height: 360px;
+    }
+  }
+
+  .inline-custom__png {
+    display: block;
+    overflow: hidden;
+    background-image: url("https://uploads.guim.co.uk/2020/06/11/bookmarks-background.svg");
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: auto 100%;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    margin: auto;
+    z-index: 3;
+  }
+
+  .inline-svg {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    z-index: 3;
+    svg {
+      height: 220px;
+    }
+    @include mq(tablet) {
+      svg {
+        height: 360px;
+      }
+    }
+  }
+
+  #Rocket {
+    transform-origin: center center;
+    animation-name: rotate-rocket;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rotate-rocket {
+    20% {
+      transform: translate(-9px, -13px) rotate(-8deg);
+    }
+    40% {
+      transform: translate(-4px, -5px) rotate(4deg);
+    }
+    60% {
+      transform: translate(-0px, -0px) rotate(-12deg);
+    }
+    80% {
+      transform: translate(-12px, -6px) rotate(-12deg);
+    }
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  #Burner {
+    animation-name: o-change;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes o-change {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #shooting-star-2 {
+    animation-name: moving-star-2;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes moving-star-2 {
+    0% {
+      opacity: 0;
+      transform: translate(-300px, 200px);
+    }
+    5% {
+      opacity: 1;
+    }
+    15% {
+      opacity: 1;
+    }
+    20% {
+      transform: translate(300px, 40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(300px, 40px);
+      opacity: 0;
+    }
+  }
+
+  #shooting-star-4 {
+    animation-name: moving-star-4;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes moving-star-4 {
+    0% {
+      opacity: 0;
+      transform: translate(300px, -80px);
+    }
+    5% {
+      opacity: 1;
+    }
+    15% {
+      opacity: 1;
+    }
+    20% {
+      transform: translate(-120px, 240px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-120px, 240px);
+      opacity: 0;
+    }
+  }
+
+  .email-signup {
+    background-color: $background-colour;
+    min-width: 16em;
+  }
+
+  .main__column--horizontal-bar:before {
+    content: "";
+    display: block;
+    border-bottom: 2px solid $background-colour;
+  }
+
+  .email-signup-main {
+    background-color: $background-colour;
+  }
+
+  .custom-email {
+    margin-top: $gs-baseline * 2;
+    background-color: $email-background-colour;
+    padding: 8px 6px;
+    border-radius: 8px;
+
+    iframe {
+      min-height: 90px;
+    }
+
+    .inline-clock {
+      fill: $email-text-colour;
+    }
+
+    &__caption {
+      @include fs-textSans(2);
+      color: $email-secondary-colour;
+      width: 100%;
+      margin: 0 4px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      
+      max-width: 390px;
+    }
+
+    &__frequency {
+      color: $email-text-colour;
+      font-weight: bold;
+    }
+  }
+
+  .email-signup-header {
+    color: $text-colour;
+
+    &__heading {
+      display: inline-block;
+      padding-top: $gs-baseline / 2;
+  
+      svg {
+        height: 30px;
+        width: 159px;
+  
+        path {
+          fill: $text-colour;
+        }
+  
+        @include mq($from: tablet) {
+          height: 39px;
+          width: 206px;
+        }
+      }
+    }
+  
+    &__intro {
+      @include fs-header(2);
+      margin: 0;
+      line-height: 0;
+      padding-top: $gs-baseline / 2;
+      padding-bottom: $gs-baseline;
+  
+      @include mq($from: tablet) {
+        @include fs-header(3);
+        line-height: 0;
+      }
+    }
+  
+    &__text {
+      @include fs-bodyCopy(2);
+      margin-top: $gs-baseline / 2;
+  
+      @include mq($from: tablet) {
+        @include fs-bodyCopy(3);
+        margin-top: $gs-baseline;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      text-decoration: none !important;
+      color: $secondary-colour;
+      &:hover {
+        color: darken($secondary-colour, 10%);
+      }
+    }
+
+    .link-with-arrow {
+      .link-with-arrow__arrow {
+        vertical-align: text-bottom;
+        margin-bottom: 2px;
+        display: inline-block;
+
+        circle {
+          stroke: $secondary-colour;
+          fill: unset;
+        }
+
+        path {
+          fill: $secondary-colour;
+        }
+      }
+
+      &:hover {
+        .link-with-arrow__arrow {
+          circle {
+            fill: darken($secondary-colour, 10%);
+            stroke: unset;
+          }
+
+          path {
+            fill: $background-colour;
+          }
+        }
+      }
+    }
+  }
+}
+
+.android,
+.ios {
+  .interactive-wrapper {
+    .inline-svg {
+      display: none;
+    }
+    .inline-custom__png {
+      display: block;
+    }
+  }
+}
