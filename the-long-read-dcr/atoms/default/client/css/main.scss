@@ -8,25 +8,22 @@ $neutral-1: #333333;
 $neutral-7: #484848;
 $neutral-2: #767676;
 $neutral-3: #bdbdbd;
-$illustration-bg: #000000;
+$illustration-bg: #7c52be;
 $white: #ffffff;
 
-$comment-main-1: #c05303;
-$comment-main-2: #ff9b0b;
-$comment-support-1: #7d7569;
-$review-support-1: #615b52;
-$comment-support-3: #ffce4b;
+$features-support-1: #951c55;
+$features-support-3: #fdadba;
 $comment-support-4: #e6711b;
 
 $gs-baseline: 12px;
 
-$background-colour: $review-support-1;
+$background-colour: $features-support-1;
 $text-colour: $white;
-$secondary-colour: $comment-support-3;
+$secondary-colour: $features-support-3;
 
 $email-background-colour: $white;
 $email-text-colour: $neutral-1;
-$email-secondary-colour: #ab0613;
+$email-secondary-colour: $features-support-1;
 
 .interactive-wrapper {
   overflow-x: hidden;
@@ -82,7 +79,7 @@ $email-secondary-colour: #ab0613;
   .inline-custom__png {
     display: block;
     overflow: hidden;
-    background-image: url("https://uploads.guim.co.uk/2020/06/11/bookmarks-background.svg");
+    background-image: url("https://media.guim.co.uk/7a461d62afa662af1b4a5bdc18ba60ba94055138/0_0_5257_840/5257.jpg");
     position: absolute;
     height: 100%;
     width: 100%;
@@ -278,11 +275,7 @@ $email-secondary-colour: #ab0613;
       svg {
         height: 30px;
         width: 159px;
-  
-        path {
-          fill: $text-colour;
-        }
-  
+    
         @include mq($from: tablet) {
           height: 39px;
           width: 206px;
