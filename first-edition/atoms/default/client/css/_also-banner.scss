@@ -1,0 +1,114 @@
+.interactive-wrapper {
+    .also-banner {
+
+        .l-row {
+            background-color: #052962;
+            padding: 8px 10px;
+
+            @include mq (tablet) {
+                padding: 20px 12px;
+            }
+        }
+
+        h2 {
+            font-family: $f-serif-headline;
+            color: $yellow-accent;
+            font-size: 28px;
+            line-height: 28px;
+            font-weight: 700;
+            max-width: 6em;
+            padding-bottom: 20px;
+        }
+    }
+    
+    .long-read-advert {
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        border: 2px dashed #F6F6F6;
+        padding: 8px;
+        background-color: #650054;     
+        color: white;
+        text-decoration: none;
+        &:visited,&:active {
+            text-decoration: none;
+            color: white;
+        }
+        
+        font-family: $f-serif-headline;
+
+        @include mq (tablet) {
+            flex-direction: row;
+        }
+        
+        &__text {
+            
+            padding-bottom: 8px;
+
+            @include mq (tablet) {
+                flex-basis: 28em; //for line breaking
+                padding-left: 8px;
+                padding-right: 16px;
+            }
+        }
+
+        &__title {
+            font-family: $f-serif-headline;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
+            text-align: left;
+            color: white !important;
+        }
+
+        &__description {
+            font-family: $f-serif-headline;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white !important;
+        }
+
+        &__button {
+            
+            flex-shrink: 0;
+            align-self: flex-start;
+            border-radius: 30px;
+            padding: 6px 16px 6px 18px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            background-color: white;
+            font-family: $f-sans-serif-text;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 21px;
+            color: #052962;
+
+            @include mq (tablet) {
+                align-self: flex-end;
+                margin-bottom: 10px;
+            }
+
+            svg {
+                fill: #052962;
+            }
+        }
+
+        .category-line {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+        }
+    }
+}
+
+

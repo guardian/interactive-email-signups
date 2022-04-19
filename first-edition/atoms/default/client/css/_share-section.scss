@@ -1,0 +1,67 @@
+.interactive-wrapper--first-edition {
+  .share-section {
+    display: flex;
+    align-items: center;
+
+    @include mq(tablet) {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: $f-sans-serif-text;
+      font-size: 17px;
+      line-height: 22.95px;
+      font-weight: 700;
+      color: #333333;
+      margin-right: 10px;
+    }
+
+    ul {
+      float: left;
+      list-style: none;
+    }
+
+    li {
+      padding-right: 8px;
+      float: left;
+      min-width: 32px;
+      cursor: pointer;
+      margin-top: 3px;
+    }
+
+    span {
+      border: 1px solid #121212;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 32px;
+      max-width: 100%;
+      width: auto;
+      height: 32px;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      box-sizing: content-box;
+
+      fill: #121212;
+
+      &:hover {
+        background-color: #121212;
+        border-color: #121212;
+        fill: white;
+      }
+
+      svg {
+        height: 88%;
+        width: 88%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+      }
+    }
+  }
+}

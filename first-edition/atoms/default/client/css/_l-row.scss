@@ -1,0 +1,85 @@
+.interactive-wrapper {
+  .l-row {
+
+    @mixin allCells {
+        .l-row__left, .l-row__right,.l-row__full {
+            @content;
+        }
+    }
+
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 12px;
+
+    @include mq(tablet) {
+      max-width: 740px;
+      border-left: 1px solid #dcdcdc;
+      border-right: 1px solid #dcdcdc;
+    }
+    @include mq(desktop) {
+      flex-direction: row;
+      max-width: 980px;
+    }
+    @include mq(leftCol) {
+      max-width: 1140px;
+    }
+    @include mq(wide) {
+      max-width: 1300px;
+    }
+
+    &__left {
+      flex: 1 1;
+      @include mq(desktop) {
+        flex: 0 0 160px;
+      }
+      @include mq(leftCol) {
+      }
+      @include mq(wide) {
+        flex: 0 0 240px;
+      }
+
+      &--right-ruled {
+        @include mq(desktop) {
+          border-right: 1px solid #dcdcdc;
+        }
+      }
+    }
+
+    &__right {
+      flex: 1 1;
+      @include mq(desktop) {
+          padding-left: 20px;
+          padding-right: 13px;
+      }
+    }
+
+    &__full {
+      flex: 1 1;
+    }
+
+    &--20-top {
+        @include allCells() {
+            padding-top: 20px;
+        }
+    }
+
+    &--20-bottom {
+        @include allCells() {
+          @include mq(desktop) {
+            padding-bottom: 20px;
+          }
+        }
+    }
+
+    &--block {
+        padding: 0;
+        display: block;
+    }
+  }
+
+}

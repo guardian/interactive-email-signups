@@ -1,0 +1,111 @@
+.interactive-wrapper--first-edition {
+  .content-section {
+    &__main-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 34px;
+      line-height: 115%;
+      font-weight: 700;
+      font-family: $f-serif-headline;
+      margin-bottom: 12px;
+      max-width: 7em; // keeps line breaking in right place
+
+      @include mq(tablet) {
+        font-size: 42px;
+        margin-bottom: 23px;
+      }
+    }
+    
+    &__copy-text {
+      font-family: $f-serif-headline;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 115%;
+      margin-bottom: 10px;
+
+      @include mq(tablet) {
+        font-size: 20px;
+      }
+    }
+
+    &__preview-link {
+      display: flex;
+      align-items: center;
+      @include fs-textSans(2);
+      padding: 10px 0 20px;
+      font-size: 14px;
+      font-weight: 700;
+      
+      color: #121212;
+      text-decoration: none;
+      &:visited, &:active {
+        text-decoration: none;
+        color: #121212;
+      }
+
+      svg {
+        margin: 0 11px 0 0;
+      }
+
+      @include mq(tablet) {
+        display: none;
+      }
+    }
+
+    &__privacy {
+      font-family: $f-sans-serif-text;
+      font-size: 12px;
+      line-height: 16.2px;
+      color: #121212;
+      padding-bottom: 18px;
+
+      &--bold {
+        font-weight: 700;
+      }
+
+      a, a:visited, a:active {
+        text-decoration: underline;
+        color: #121212;
+      }
+      
+      &--link {
+        text-decoration: underline;
+        color: #121212 !important;
+      }
+    }
+  }
+
+  .column-layout {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 18px;
+
+    @include mq(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__left {
+      flex: 1;
+
+      @include mq(tablet) {
+        padding-right: 9px;
+      }
+  
+      &--flex {
+        display: flex;
+      }
+    }
+
+    &__right {
+      flex: 1.4;
+      @include mq(tablet) {
+        padding-left: 9px;
+      }
+    }
+  }
+}

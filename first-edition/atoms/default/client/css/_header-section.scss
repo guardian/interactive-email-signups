@@ -1,0 +1,12 @@
+.interactive-wrapper {
+    .header-section {
+        
+        .l-row {
+            background-color: #052962;
+            padding: 10px 16px;
+            @include mq(wide) {
+                padding-left: 80px;
+            }
+        }
+    }
+}

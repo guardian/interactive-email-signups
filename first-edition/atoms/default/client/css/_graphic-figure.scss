@@ -1,0 +1,52 @@
+.interactive-wrapper--first-edition {
+  .graphic-figure {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__svg{
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      box-sizing: border-box;
+      flex: 1;
+      text-decoration: inherit;
+    }
+
+    figcaption {
+      background-color: $yellow-accent;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin: 0 11px;
+      }
+
+      span {
+        @include fs-textSans(2);
+        color: #121212;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+
+    &--tablet {
+      display: none;
+      @include mq(tablet) {
+        display: flex;
+      }
+    }
+
+    &--mobile {
+      margin-bottom: 16px;
+
+      @include mq(tablet) {
+        display: none;
+      }
+    }
+  }
+}
