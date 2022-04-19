@@ -9,3 +9,6 @@ Install node modules: `npm i`
 
 To run locally: `npm start` or `gulp`.  
 
+## Deploying
+
+* `AWS_PROFILE=interactives npx gulp deploylive`
