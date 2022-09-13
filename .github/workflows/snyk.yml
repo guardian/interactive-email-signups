@@ -10,5 +10,6 @@ jobs:
       DEBUG: true
       ORG: guardian-test
       SKIP_NODE: false
+      NODE_VERSION_FILE: bookmarks/.nvmrc # workaround until project has root .nvmrc file
     secrets:
        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
