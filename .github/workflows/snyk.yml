@@ -1,0 +1,16 @@
+# This action is just a test
+name: Snyk
+
+on: push
+
+jobs:
+  security:
+    uses: guardian/.github/.github/workflows/sbt-node-snyk.yml@main
+    with:
+      DEBUG: true
+      ORG: guardian-test
+      SKIP_NODE: false
+      NODE_VERSION_FILE: bookmarks/.nvmrc # workaround until project has root .nvmrc file
+      NODE_PACKAGE_JSON_FILES_MISSING_LOCK: fashion-statement/package.json
+    secrets:
+       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
